@@ -1,0 +1,221 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.first-sec {
+    height: 610px;
+    background: rgb(22, 22, 22);
+    background-image: url("img/info-bg.jpg");
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-info {
+    margin: auto;
+    text-align: center;
+    margin-top: 70px;
+    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.avatar {
+    margin: 20px auto;
+    border: 2px solid rgb(63, 63, 63)
+}
+
+.title {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+.title b {
+    color: rgb(71, 71, 71);
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    background-image: url("/img/avatar.jpg");
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.desc {
+    color: rgb(167, 167, 167);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.media-links {
+    margin-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.second-sec {
+    height: 400px;
+    padding: 50px;
+    background-color: rgb(28, 31, 34);
+    font-family: 'Noto Sans SC', sans-serif;
+    background-image: url("/img/sec2.png");
+    background-position-x: 120%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.26);
+}
+
+.text-section {
+    width: 400px;
+    color: rgb(152, 163, 168);
+    float: left;
+    margin-left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.info-title {
+    font-size: 20px;
+    color: rgb(220, 226, 228);
+    font-weight: 900;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@keyframes titleB-anim {
+    from {
+        color: rgb(76, 133, 197);
+    }
+    to {
+        color: rgb(159, 114, 207);
+    }
+}
+
+.info-title b {
+    color: rgb(76, 133, 197);
+    animation-name: titleB-anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.second-sec .key {
+    color: rgb(57, 119, 201);
+    font-size: 25px;
+}
+
+.third-sec {
+    background: rgb(27, 24, 26);
+    height: 500px;
+    overflow: hidden;
+}
+
+.proj-title {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(223, 223, 223);
+    margin-top: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    opacity: 0;
+    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    filter: blur(5px);
+}
+
+.key {
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+}
+
+.third-sec .key {
+    color: rgb(201, 57, 124);
+}
+
+.skills {
+    height: 150px;
+    opacity: 0;
+    filter: blur(5px);
+    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    padding-top: 25px;
+}
+
+.skl-sec {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+}
+
+.skl-icon {
+    fill: white;
+    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+}
+
+.skl-name {
+    font-size: 20px;
+}
+
+.skl-rank {
+    color: grey;
+    display: inline-block;
+    margin-top: 3px;
+    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+}
+
+.skl-hover {
+    opacity: 1 !important;
+}
+
+.skl-html:hover, .skl-html:hover .skl-rank {
+    color: rgb(243, 127, 59);
+}
+
+.skl-html:hover .skl-icon {
+    fill: rgb(243, 127, 59);
+}
+
+.skl-css:hover, .skl-css:hover .skl-rank {
+    color: rgb(69, 162, 238);
+}
+
+.skl-css:hover .skl-icon {
+    fill: rgb(69, 162, 238);
+}
+
+.skl-ps:hover, .skl-ps:hover .skl-rank {
+    color: rgb(94, 137, 218);
+}
+
+.skl-ps:hover .skl-icon {
+    fill: rgb(94, 137, 218);
+}
+
+.skl-js:hover, .skl-js:hover .skl-rank {
+    color: rgb(238, 212, 66);
+}
+
+.skl-js:hover .skl-icon {
+    fill: rgb(238, 212, 66);
+}
+
+.skl-jq:hover, .skl-jq:hover .skl-rank {
+    color: rgb(21, 68, 223);
+}
+
+.skl-jq:hover .skl-icon {
+    fill: rgb(21, 68, 223);
+}
+
+.skl-react:hover, .skl-react:hover .skl-rank {
+    color: rgb(56, 210, 221);
+}
+
+.skl-react:hover .skl-icon {
+    fill: rgb(56, 210, 221);
+}
