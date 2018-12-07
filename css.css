@@ -4,7 +4,7 @@ body, html {
 }
 
 .first-sec {
-    height: 610px;
+    height: 620px;
     background: rgb(22, 22, 22);
     background-image: url("img/info-bg.jpg");
     background-size: cover;
@@ -15,10 +15,11 @@ body, html {
 .main-info {
     margin: auto;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 50px;
     transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
     opacity: 0;
     filter: blur(5px);
+    transform: translate(0, 20px);
 }
 
 .avatar {
@@ -66,7 +67,7 @@ body, html {
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.377);
 }
 
 .text-section {
@@ -103,13 +104,10 @@ body, html {
     animation-direction: alternate;
 }
 
-.second-sec .key {
-    color: rgb(57, 119, 201);
-    font-size: 25px;
-}
-
 .third-sec {
-    background: rgb(27, 24, 26);
+    background-image: url("/img/sec3.png");
+    background-color: rgb(27, 24, 26);
+    background-size: cover;
     height: 500px;
     overflow: hidden;
 }
@@ -125,6 +123,15 @@ body, html {
     filter: blur(5px);
 }
 
+@keyframes projKey {
+    from {
+        color: rgb(201, 57, 124);
+    }
+    to {
+        color: rgb(69, 168, 248);
+    }
+}
+
 .key {
     display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
@@ -132,7 +139,10 @@ body, html {
 }
 
 .third-sec .key {
-    color: rgb(201, 57, 124);
+    animation-name: projKey;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .skills {
@@ -140,7 +150,7 @@ body, html {
     opacity: 0;
     filter: blur(5px);
     transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .skl-sec {
@@ -205,17 +215,68 @@ body, html {
 }
 
 .skl-jq:hover, .skl-jq:hover .skl-rank {
-    color: rgb(21, 68, 223);
+    color: rgb(93, 90, 241);
 }
 
 .skl-jq:hover .skl-icon {
-    fill: rgb(21, 68, 223);
+    fill: rgb(93, 90, 241);
 }
 
 .skl-react:hover, .skl-react:hover .skl-rank {
-    color: rgb(56, 210, 221);
+    color: rgb(56, 196, 221);
 }
 
 .skl-react:hover .skl-icon {
-    fill: rgb(56, 210, 221);
+    fill: rgb(56, 196, 221);
+}
+
+.skills-title {
+    color: rgba(255, 255, 255, 0.678);
+    width: 200px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    transform: scale(1) !important;
+    opacity: 0;
+    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+}
+
+.skl-tbar {
+    width: 20px;
+    display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.proj-list {
+    height: 200px;
+    padding: 50px;
+    text-align: center;
+}
+
+.project {
+    width: 250px;
+    height: 120px;
+    background-color: rgb(121, 121, 121);
+    display: inline-block;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
+    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+}
+
+.project:hover {
+    filter: brightness(150%);
+}
+
+.minimum {
+    background-image: url("/img/ico-minimum.jpg");
+}
+
+.blankproj {
+    background-image: url("img/ico-blankproj.jpg");
 }
