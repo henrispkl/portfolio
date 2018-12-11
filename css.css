@@ -53,8 +53,12 @@ body, html {
 }
 
 .media-links {
-    margin-top: 100px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     font-family: 'Courier New', Courier, monospace;
+    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    opacity: 0;
+    filter: blur(5px);
 }
 
 .second-sec {
@@ -125,10 +129,10 @@ body, html {
 
 @keyframes projKey {
     from {
-        color: rgb(201, 57, 124);
+        color: rgb(255, 120, 79);
     }
     to {
-        color: rgb(69, 168, 248);
+        color: rgb(232, 116, 243);
     }
 }
 
@@ -266,17 +270,63 @@ body, html {
     margin: 10px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
-    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    opacity: 0;
+    text-decoration: none;
 }
 
 .project:hover {
-    filter: brightness(150%);
+    filter: brightness(130%);
+}
+
+.dummy-project::before {
+    content: "dummy website";
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    background-color: rgb(48, 75, 41);
+    color: rgb(142, 204, 126);
+    padding: 3px;
+    height: 20px;
+    display: block;
 }
 
 .minimum {
     background-image: url("/img/ico-minimum.jpg");
 }
 
+.travelfy {
+    background-image: url("/img/ico-travelfy.jpg");
+}
+
 .blankproj {
     background-image: url("img/ico-blankproj.jpg");
+}
+
+.git-link {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid rgb(29, 29, 29);
+    border-bottom: 1px solid rgb(56, 56, 56);
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: left;
+    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+}
+
+.git-link:hover {
+    filter: brightness(125%);
+}
+
+.git-img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.git-url {
+    color: rgb(216, 216, 216);
+    text-decoration: none;
+    vertical-align: super;
 }

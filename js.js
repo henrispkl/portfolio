@@ -1,5 +1,6 @@
 var mainInfo = document.getElementsByClassName("main-info");
 var skills = document.getElementsByClassName("skills");
+var mLinks = document.getElementsByClassName("media-links");
 
 setTimeout(() => {
   mainInfo[0].style.transform = "translate(0, 0)";
@@ -11,6 +12,11 @@ setTimeout(() => {
   skills[0].style.opacity = "1";
   skills[0].style.filter = "blur(0px)";
 }, 1800);
+
+setTimeout(() => {
+  mLinks[0].style.opacity = "1";
+  mLinks[0].style.filter = "blur(0px)";
+}, 2400);
 
 function isVisible(elm, dist) {
   if (!elm.classList.contains("_shown")) {
@@ -25,6 +31,7 @@ function isVisible(elm, dist) {
 var projTitleElem = document.getElementsByClassName("proj-title")[0];
 var projTitleName = document.getElementsByClassName("proj-titlename")[0];
 var textSectionElem = document.getElementsByClassName("text-section");
+var projects = document.getElementsByClassName("project");
 
 window.onscroll = function() {
   if (isVisible(textSectionElem[0], 150)) {
@@ -44,6 +51,21 @@ window.onscroll = function() {
     projTitleElem.style.filter = "blur(0px)";
 
     projTitleElem.classList.add("_shown");
+
+    var spi = 0;
+    function showProject() {
+      setTimeout(function() {
+        projects[spi].style.opacity = "1";
+        spi++;
+        if (spi < projects.length) {
+          showProject();
+        }
+      }, 250);
+    }
+
+    setTimeout(function() {
+      showProject();
+    }, 500);
   }
 };
 
