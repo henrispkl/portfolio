@@ -1,15 +1,121 @@
-body, html {
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .first-sec {
+        padding: 50px 0px !important;
+        padding-top: 0 !important;
+    }
+
+    .skills {
+        height: auto !important;
+    }
+
+    .skl-sec {
+        width: 30% !important;
+        margin: 20px 0 !important;
+        opacity: 0;
+    }
+
+    .skills-title {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .second-sec {
+        background-size: cover !important;
+        background-position-x: -5% !important;
+        height: auto !important;
+        padding: 0 !important;
+        overflow: hidden;
+    }
+
+    .text-section {
+        float: none !important;
+        margin: 70px auto !important;
+        width: 90% !important;
+        display: block;
+    }
+
+    .proj-title {
+        font-size: 50px !important;
+    }
+
+    .proj-list {
+        padding: 10px !important;
+        padding-top: 50px !important;
+    }
+
+    .project {
+        margin: 15px !important;
+    }
+}
+
+/* Tablets (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .first-sec {
+        padding: 50px 0px !important;
+        padding-top: 0 !important;
+    }
+
+    .skills {
+        height: auto !important;
+    }
+
+    .skl-sec {
+        width: 16% !important;
+        margin: 20px 0 !important;
+        opacity: 0;
+    }
+
+    .skills-title {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .second-sec {
+        background-size: cover !important;
+        background-position-x: -30% !important;
+        height: auto !important;
+        padding: 0 !important;
+        overflow: hidden;
+    }
+
+    .text-section {
+        float: none !important;
+        margin: 100px auto !important;
+        width: 70% !important;
+        display: block;
+    }
+
+    .proj-title {
+        font-size: 50px !important;
+    }
+
+    .proj-list {
+        padding: 10px !important;
+        padding-top: 50px !important;
+    }
+
+    .project {
+        margin: 15px !important;
+    }
+}
+
+
+body,
+html {
     margin: 0;
     padding: 0;
 }
 
 .first-sec {
-    height: 620px;
     background: rgb(22, 22, 22);
     background-image: url("img/info-bg.jpg");
     background-size: cover;
     overflow: hidden;
     position: relative;
+    padding: 30px;
 }
 
 .main-info {
@@ -54,7 +160,7 @@ body, html {
 
 .media-links {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-family: 'Courier New', Courier, monospace;
     transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
     opacity: 0;
@@ -80,13 +186,12 @@ body, html {
     float: left;
     margin-left: 50px;
     opacity: 0;
-    transition: 0.5s all ease-in-out;
+    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
 }
 
 .info-title {
     font-size: 20px;
     color: rgb(220, 226, 228);
-    font-weight: 900;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -95,6 +200,7 @@ body, html {
     from {
         color: rgb(76, 133, 197);
     }
+
     to {
         color: rgb(159, 114, 207);
     }
@@ -112,7 +218,6 @@ body, html {
     background-image: url("/img/sec3.png");
     background-color: rgb(27, 24, 26);
     background-size: cover;
-    height: 500px;
     overflow: hidden;
 }
 
@@ -131,6 +236,7 @@ body, html {
     from {
         color: rgb(255, 120, 79);
     }
+
     to {
         color: rgb(232, 116, 243);
     }
@@ -150,7 +256,7 @@ body, html {
 }
 
 .skills {
-    height: 150px;
+    height: 200px;
     opacity: 0;
     filter: blur(5px);
     transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
@@ -186,7 +292,8 @@ body, html {
     opacity: 1 !important;
 }
 
-.skl-html:hover, .skl-html:hover .skl-rank {
+.skl-html:hover,
+.skl-html:hover .skl-rank {
     color: rgb(243, 127, 59);
 }
 
@@ -194,7 +301,8 @@ body, html {
     fill: rgb(243, 127, 59);
 }
 
-.skl-css:hover, .skl-css:hover .skl-rank {
+.skl-css:hover,
+.skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
 }
 
@@ -202,7 +310,8 @@ body, html {
     fill: rgb(69, 162, 238);
 }
 
-.skl-ps:hover, .skl-ps:hover .skl-rank {
+.skl-ps:hover,
+.skl-ps:hover .skl-rank {
     color: rgb(94, 137, 218);
 }
 
@@ -210,7 +319,8 @@ body, html {
     fill: rgb(94, 137, 218);
 }
 
-.skl-js:hover, .skl-js:hover .skl-rank {
+.skl-js:hover,
+.skl-js:hover .skl-rank {
     color: rgb(238, 212, 66);
 }
 
@@ -218,7 +328,8 @@ body, html {
     fill: rgb(238, 212, 66);
 }
 
-.skl-jq:hover, .skl-jq:hover .skl-rank {
+.skl-jq:hover,
+.skl-jq:hover .skl-rank {
     color: rgb(93, 90, 241);
 }
 
@@ -226,7 +337,8 @@ body, html {
     fill: rgb(93, 90, 241);
 }
 
-.skl-react:hover, .skl-react:hover .skl-rank {
+.skl-react:hover,
+.skl-react:hover .skl-rank {
     color: rgb(56, 196, 221);
 }
 
@@ -241,7 +353,6 @@ body, html {
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -35px;
     margin-bottom: 35px;
     transform: scale(1) !important;
     opacity: 0;
@@ -257,8 +368,7 @@ body, html {
 }
 
 .proj-list {
-    height: 200px;
-    padding: 50px;
+    padding: 70px;
     text-align: center;
 }
 
@@ -267,7 +377,7 @@ body, html {
     height: 120px;
     background-color: rgb(121, 121, 121);
     display: inline-block;
-    margin: 10px;
+    margin: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
     transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
@@ -288,6 +398,8 @@ body, html {
     padding: 3px;
     height: 20px;
     display: block;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .minimum {
