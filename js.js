@@ -81,8 +81,6 @@ if (dvWidth > 1024) {
   }
 } else {
   // Skills for mobile
-  console.log("skills in portable");
-  // Skills in portable
   var showSkl_i = 0;
   function showSkl() {
     setTimeout(function() {
