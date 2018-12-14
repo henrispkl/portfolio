@@ -11,17 +11,17 @@ var mLinks = document.getElementsByClassName("media-links");
 setTimeout(() => {
   mainInfo[0].style.transform = "translate(0, 0)";
   mainInfo[0].style.opacity = "1";
-  mainInfo[0].style.filter = "blur(0px)";
+  mainInfo[0].style.transform = "translate(0)";
 }, 1000);
 
 setTimeout(() => {
   skills[0].style.opacity = "1";
-  skills[0].style.filter = "blur(0px)";
+  skills[0].style.transform = "translate(0)";
 }, 1800);
 
 setTimeout(() => {
   mLinks[0].style.opacity = "1";
-  mLinks[0].style.filter = "blur(0px)";
+  mLinks[0].style.transform = "translate(0)";
 }, 2400);
 
 function isVisible(elm, dist) {
@@ -133,7 +133,7 @@ function showElements() {
 
   if (isVisible(projTitleElem, 150)) {
     projTitleElem.style.opacity = 1;
-    projTitleElem.style.filter = "blur(0px)";
+    projTitleElem.style.transform = "translate(0)";
 
     projTitleElem.classList.add("_shown");
 

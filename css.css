@@ -5,22 +5,18 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
-
     .skills {
         height: auto !important;
     }
-
     .skl-sec {
         width: 30% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
-
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
-
     .second-sec {
         background-size: cover !important;
         background-position-x: -5% !important;
@@ -28,23 +24,19 @@
         padding: 0 !important;
         overflow: hidden;
     }
-
     .text-section {
         float: none !important;
         margin: 70px auto !important;
         width: 90% !important;
         display: block;
     }
-
     .proj-title {
         font-size: 50px !important;
     }
-
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
     }
-
     .project {
         margin: 15px !important;
     }
@@ -57,22 +49,18 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
-
     .skills {
         height: auto !important;
     }
-
     .skl-sec {
         width: 16% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
-
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
-
     .second-sec {
         background-size: cover !important;
         background-position-x: -30% !important;
@@ -80,31 +68,25 @@
         padding: 0 !important;
         overflow: hidden;
     }
-
     .text-section {
         float: none !important;
         margin: 100px auto !important;
         width: 70% !important;
         display: block;
     }
-
     .proj-title {
         font-size: 50px !important;
     }
-
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
     }
-
     .project {
         margin: 15px !important;
     }
 }
 
-
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
 }
@@ -122,10 +104,9 @@ html {
     margin: auto;
     text-align: center;
     margin-top: 50px;
-    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
-    filter: blur(5px);
-    transform: translate(0, 20px);
+    transform: translate(0, 5%);
 }
 
 .avatar {
@@ -162,9 +143,9 @@ html {
     margin-top: 20px;
     margin-bottom: 10px;
     font-family: 'Courier New', Courier, monospace;
-    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
-    filter: blur(5px);
+    transform: translate(0, 25%)
 }
 
 .second-sec {
@@ -186,7 +167,7 @@ html {
     float: left;
     margin-left: 50px;
     opacity: 0;
-    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.5s all ease-in-out;
 }
 
 .info-title {
@@ -200,7 +181,6 @@ html {
     from {
         color: rgb(76, 133, 197);
     }
-
     to {
         color: rgb(159, 114, 207);
     }
@@ -228,15 +208,14 @@ html {
     margin-top: 50px;
     font-family: 'Source Sans Pro', sans-serif;
     opacity: 0;
-    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
-    filter: blur(5px);
+    transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
+    transform: translate(0, 25%);
 }
 
 @keyframes projKey {
     from {
         color: rgb(255, 120, 79);
     }
-
     to {
         color: rgb(232, 116, 243);
     }
@@ -258,8 +237,8 @@ html {
 .skills {
     height: 200px;
     opacity: 0;
-    filter: blur(5px);
-    transition: 0.5s all cubic-bezier(.65, .05, .36, 1);
+    transform: translate(0, 10%);
+    transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
     padding-top: 10px;
 }
 
@@ -269,12 +248,12 @@ html {
     width: 100px;
     display: inline-block;
     margin: 0 10px;
-    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
 .skl-icon {
     fill: white;
-    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
 .skl-name {
@@ -285,15 +264,14 @@ html {
     color: grey;
     display: inline-block;
     margin-top: 3px;
-    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
 .skl-hover {
     opacity: 1 !important;
 }
 
-.skl-html:hover,
-.skl-html:hover .skl-rank {
+.skl-html:hover, .skl-html:hover .skl-rank {
     color: rgb(243, 127, 59);
 }
 
@@ -301,8 +279,7 @@ html {
     fill: rgb(243, 127, 59);
 }
 
-.skl-css:hover,
-.skl-css:hover .skl-rank {
+.skl-css:hover, .skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
 }
 
@@ -310,8 +287,7 @@ html {
     fill: rgb(69, 162, 238);
 }
 
-.skl-ps:hover,
-.skl-ps:hover .skl-rank {
+.skl-ps:hover, .skl-ps:hover .skl-rank {
     color: rgb(94, 137, 218);
 }
 
@@ -319,8 +295,7 @@ html {
     fill: rgb(94, 137, 218);
 }
 
-.skl-js:hover,
-.skl-js:hover .skl-rank {
+.skl-js:hover, .skl-js:hover .skl-rank {
     color: rgb(238, 212, 66);
 }
 
@@ -328,8 +303,7 @@ html {
     fill: rgb(238, 212, 66);
 }
 
-.skl-jq:hover,
-.skl-jq:hover .skl-rank {
+.skl-jq:hover, .skl-jq:hover .skl-rank {
     color: rgb(93, 90, 241);
 }
 
@@ -337,8 +311,7 @@ html {
     fill: rgb(93, 90, 241);
 }
 
-.skl-react:hover,
-.skl-react:hover .skl-rank {
+.skl-react:hover, .skl-react:hover .skl-rank {
     color: rgb(56, 196, 221);
 }
 
@@ -356,7 +329,7 @@ html {
     margin-bottom: 35px;
     transform: scale(1) !important;
     opacity: 0;
-    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
 .skl-tbar {
@@ -380,7 +353,7 @@ html {
     margin: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
-    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
     text-decoration: none;
 }
@@ -424,7 +397,7 @@ html {
     border-radius: 2px;
     padding: 5px 10px;
     text-align: left;
-    transition: 0.3s all cubic-bezier(.65, .05, .36, 1);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
 .git-link:hover {
