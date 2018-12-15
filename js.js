@@ -6,7 +6,7 @@ if (dvWidth > 320 && dvWidth < 480) {
 
 var mainInfo = document.getElementsByClassName("main-info");
 var skills = document.getElementsByClassName("skills");
-var mLinks = document.getElementsByClassName("media-links");
+var mLinks = document.getElementsByClassName("m-link");
 
 setTimeout(() => {
   mainInfo[0].style.transform = "translate(0, 0)";
@@ -19,9 +19,21 @@ setTimeout(() => {
   skills[0].style.transform = "translate(0)";
 }, 1800);
 
+// Show m-link
+var mLink_i = 0;
+function showMLink() {
+  setTimeout(function() {
+    mLinks[mLink_i].style.opacity = "1";
+    mLinks[mLink_i].style.transform = "translate(0)";
+    mLink_i++;
+    if (mLink_i < mLinks.length) {
+      showMLink();
+    }
+  }, 200);
+}
+
 setTimeout(() => {
-  mLinks[0].style.opacity = "1";
-  mLinks[0].style.transform = "translate(0)";
+  showMLink();
 }, 2400);
 
 function isVisible(elm, dist) {

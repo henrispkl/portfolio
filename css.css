@@ -5,6 +5,9 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
+    .m-link {
+        margin: 5px !important;
+    }
     .skills {
         height: auto !important;
     }
@@ -146,8 +149,6 @@ body, html {
     margin-bottom: 10px;
     font-family: 'Courier New', Courier, monospace;
     transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
-    opacity: 0;
-    transform: translate(0, 25%)
 }
 
 .second-sec {
@@ -400,6 +401,8 @@ body, html {
     padding: 5px 10px;
     text-align: left;
     transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
+    transform: translate(0, 25%);
+    opacity: 0;
 }
 
 .m-link:hover {
