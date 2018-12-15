@@ -36,6 +36,7 @@
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
+        padding-bottom: 50px !important;
     }
     .project {
         margin: 15px !important;
@@ -80,6 +81,7 @@
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
+        padding-bottom: 50px !important;
     }
     .project {
         margin: 15px !important;
@@ -387,7 +389,7 @@ body, html {
     background-image: url("img/ico-blankproj.jpg");
 }
 
-.git-link {
+.m-link {
     font-family: 'Noto Sans SC', sans-serif;
     background-color: rgb(34, 34, 34);
     border: 1px solid rgb(29, 29, 29);
@@ -400,17 +402,17 @@ body, html {
     transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
-.git-link:hover {
+.m-link:hover {
     filter: brightness(125%);
 }
 
-.git-img {
+.m-img {
     width: 18px;
     height: 18px;
     margin-right: 5px;
 }
 
-.git-url {
+.m-url {
     color: rgb(216, 216, 216);
     text-decoration: none;
     vertical-align: super;
