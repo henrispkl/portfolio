@@ -309,6 +309,10 @@ html {
     fill: rgb(243, 127, 59);
 }
 
+.skl-css svg {
+    transform: translate(0, 4px);
+}
+
 .skl-css:hover,
 .skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
