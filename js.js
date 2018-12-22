@@ -110,7 +110,6 @@ if (dvWidth > 1024) {
   var _shownSkl = false;
 
   function executeShowSkl() {
-    console.log("scroll");
     if (isVisible(document.getElementsByClassName("skills")[0], 100)) {
       if (_shownSkl == false) {
         showSkl();

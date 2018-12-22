@@ -5,42 +5,50 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
+
+    .desc {
+        padding: 0 15px;
+    }
+
     .m-link {
         margin: 5px !important;
     }
+
     .skills {
         height: auto !important;
     }
+
     .skl-sec {
         width: 30% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
+
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
+
     .second-sec {
         background-size: cover !important;
         background-position-x: -5% !important;
         height: auto !important;
-        padding: 0 !important;
-        overflow: hidden;
     }
+
     .text-section {
-        float: none !important;
-        margin: 70px auto !important;
-        width: 90% !important;
-        display: block;
+        width: 80% !important;
     }
+
     .proj-title {
         font-size: 50px !important;
     }
+
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
+
     .project {
         margin: 15px !important;
     }
@@ -53,45 +61,53 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
+
+    .desc {
+        padding: 0 10px;
+    }
+
     .skills {
         height: auto !important;
     }
+
     .skl-sec {
         width: 16% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
+
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
+
     .second-sec {
         background-size: cover !important;
         background-position-x: -30% !important;
         height: auto !important;
-        padding: 0 !important;
-        overflow: hidden;
     }
+
     .text-section {
-        float: none !important;
-        margin: 100px auto !important;
         width: 70% !important;
-        display: block;
     }
+
     .proj-title {
         font-size: 50px !important;
     }
+
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
+
     .project {
         margin: 15px !important;
     }
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
@@ -125,8 +141,11 @@ body, html {
     font-size: 40px;
 }
 
-.title b {
-    color: rgb(71, 71, 71);
+.title>span {
+    animation-name: projKey;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .avatar {
@@ -153,7 +172,7 @@ body, html {
 
 .second-sec {
     height: 400px;
-    padding: 50px;
+    overflow: hidden;
     background-color: rgb(28, 31, 34);
     font-family: 'Noto Sans SC', sans-serif;
     background-image: url("/img/sec2.png");
@@ -165,25 +184,31 @@ body, html {
 }
 
 .text-section {
-    width: 400px;
+    width: 600px;
     color: rgb(152, 163, 168);
-    float: left;
-    margin-left: 50px;
+    margin: 50px auto;
+    font-size: 20px;
     opacity: 0;
     transition: 0.5s all ease-in-out;
 }
 
 .info-title {
-    font-size: 20px;
+    font-size: 40px;
     color: rgb(220, 226, 228);
     width: 100%;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-text {
+    text-align: justify;
 }
 
 @keyframes titleB-anim {
     from {
         color: rgb(76, 133, 197);
     }
+
     to {
         color: rgb(159, 114, 207);
     }
@@ -219,6 +244,7 @@ body, html {
     from {
         color: rgb(255, 120, 79);
     }
+
     to {
         color: rgb(232, 116, 243);
     }
@@ -274,7 +300,8 @@ body, html {
     opacity: 1 !important;
 }
 
-.skl-html:hover, .skl-html:hover .skl-rank {
+.skl-html:hover,
+.skl-html:hover .skl-rank {
     color: rgb(243, 127, 59);
 }
 
@@ -282,7 +309,8 @@ body, html {
     fill: rgb(243, 127, 59);
 }
 
-.skl-css:hover, .skl-css:hover .skl-rank {
+.skl-css:hover,
+.skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
 }
 
@@ -290,7 +318,8 @@ body, html {
     fill: rgb(69, 162, 238);
 }
 
-.skl-ps:hover, .skl-ps:hover .skl-rank {
+.skl-ps:hover,
+.skl-ps:hover .skl-rank {
     color: rgb(94, 137, 218);
 }
 
@@ -298,7 +327,8 @@ body, html {
     fill: rgb(94, 137, 218);
 }
 
-.skl-js:hover, .skl-js:hover .skl-rank {
+.skl-js:hover,
+.skl-js:hover .skl-rank {
     color: rgb(238, 212, 66);
 }
 
@@ -306,7 +336,8 @@ body, html {
     fill: rgb(238, 212, 66);
 }
 
-.skl-jq:hover, .skl-jq:hover .skl-rank {
+.skl-jq:hover,
+.skl-jq:hover .skl-rank {
     color: rgb(93, 90, 241);
 }
 
@@ -314,7 +345,8 @@ body, html {
     fill: rgb(93, 90, 241);
 }
 
-.skl-react:hover, .skl-react:hover .skl-rank {
+.skl-react:hover,
+.skl-react:hover .skl-rank {
     color: rgb(56, 196, 221);
 }
 
@@ -350,32 +382,69 @@ body, html {
 
 .project {
     width: 250px;
-    height: 120px;
+    height: 250px;
     background-color: rgb(121, 121, 121);
     display: inline-block;
     margin: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
+    opacity: 0;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
+}
+
+.project-info {
+    background-color: rgba(0, 0, 0, 0.788);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
+}
+
+.project:hover .project-info {
+    opacity: 1;
+}
+
+.project-title {
+    color: white;
+    margin-top: 70px;
+    font-size: 25px;
+}
+
+@keyframes vProj {
+    from {
+        background-color: rgb(76, 133, 197);
+    }
+
+    to {
+        background-color: rgb(159, 114, 207);
+    }
+}
+
+.view-project {
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 50px;
+    padding: 10px;
+    font-size: 15px;
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
+    animation-name: vProj;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-weight: bold;
+    display: block;
     text-decoration: none;
 }
 
-.project:hover {
+.view-project:hover {
     filter: brightness(130%);
-}
-
-.dummy-project::before {
-    content: "dummy website";
-    font-family: 'Source Sans Pro', sans-serif;
-    position: relative;
-    background-color: rgb(48, 75, 41);
-    color: rgb(142, 204, 126);
-    padding: 3px;
-    height: 20px;
-    display: block;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
 }
 
 .minimum {
