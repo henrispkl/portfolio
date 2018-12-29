@@ -2,6 +2,7 @@
     .title {
         padding: 0 10px;
     }
+
     .main-text {
         width: 80% !important;
         margin-left: auto !important;
@@ -12,6 +13,7 @@
         padding: 0 !important;
         font-size: 1.5em !important;
     }
+
     .media-links {
         width: 80%;
         margin-left: auto !important;
@@ -19,10 +21,12 @@
         font-size: 1.5em;
         text-align: center;
     }
+
     #sec-2 {
         height: auto !important;
         padding: 100px 0;
     }
+
     .sec-2-imgs {
         top: 0px !important;
         transform: none !important;
@@ -31,10 +35,12 @@
         width: 100%;
         box-shadow: none !important;
     }
+
     .sec-2-image {
         width: 100px !important;
         height: 250px !important;
     }
+
     .sec-2-text {
         float: none !important;
         width: 80% !important;
@@ -48,45 +54,56 @@
         border-right: none !important;
         border-bottom: 3px solid rgb(31, 31, 31);
     }
+
     #sec-3 {
         height: auto !important;
-        background-size: 200% !important;
+        background-size: 220% !important;
         background-position: bottom !important;
     }
+
     #sec-3 h1 {
         font-size: 2em !important;
         margin-top: 50px !important;
     }
+
     #sec-3 p {
         width: 90% !important;
         margin-bottom: 150px !important;
     }
+
     .sec-4-img {
         width: 243px !important;
         height: 160px !important;
     }
+
     #sec-4 h1 {
         font-size: 1.5em !important;
         width: 310px !important;
         margin-top: 40px !important;
     }
+
     #sec-4 .triangles {
         width: 310px !important;
     }
+
     .pj {
         width: 200px !important;
         height: 200px !important;
     }
+
     footer {
         padding: 50px !important;
     }
+
     footer h1 {
         text-align: center;
     }
+
     footer address {
         float: none !important;
         width: auto !important;
     }
+
     .f-info {
         float: none !important;
         width: auto !important;
@@ -101,6 +118,7 @@
         margin-right: auto !important;
         font-size: 1.5em !important;
     }
+
     .media-links {
         width: 80%;
         margin-left: auto !important;
@@ -108,10 +126,12 @@
         font-size: 1.2em;
         text-align: center;
     }
+
     #sec-2 {
         height: auto !important;
         padding: 100px 50px;
     }
+
     .sec-2-imgs {
         top: 0px !important;
         transform: none !important;
@@ -120,10 +140,12 @@
         width: 100%;
         box-shadow: none !important;
     }
+
     .sec-2-image {
         width: 140px !important;
         height: 350px !important;
     }
+
     .sec-2-text {
         float: none !important;
         width: 80% !important;
@@ -137,43 +159,54 @@
         border-right: none !important;
         border-bottom: 3px solid rgb(31, 31, 31);
     }
+
     #sec-3 {
         height: 450px !important;
         background-position: bottom !important;
     }
+
     #sec-3 h1 {
         font-size: 2em !important;
         margin-top: 50px !important;
     }
+
     #sec-3 p {
         width: 90% !important;
         margin-bottom: 150px !important;
     }
+
     .sec-4-img {
         width: 425.6px !important;
         height: 280px !important;
     }
+
     #sec-4 h1 {
         font-size: 1.5em !important;
         width: 493px !important;
         margin-top: 30px !important;
     }
+
     #sec-4 .triangles {
         width: 493px !important;
     }
+
     .pj {
         width: 250px !important;
         height: 250px !important;
     }
+
     footer {
         padding: 50px !important;
     }
-    footer address, .f-info {
+
+    footer address,
+    .f-info {
         width: 50%;
     }
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -339,7 +372,7 @@ body, html {
     overflow: hidden;
     font-family: 'Raleway', sans-serif;
     position: relative;
-    box-shadow: 0 0 30px #0000004d;
+    box-shadow: 0 0 30px #0009;
 }
 
 .sec-4-img {
