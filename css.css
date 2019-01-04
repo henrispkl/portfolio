@@ -5,66 +5,83 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
+
     .desc {
         padding: 0 15px;
     }
+
     .m-link {
         margin: 5px !important;
     }
+
     .skills {
         height: auto !important;
     }
+
     .skl-sec {
         width: 30% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
+
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
+
     .second-sec {
         padding: 50px 20px !important;
     }
+
     .text-section {
         width: 80% !important;
     }
+
     .proj-title {
         font-size: 3em !important;
     }
+
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
+
     .project {
         margin: 15px !important;
     }
+
     .second-sec .text-section {
         float: none !important;
         margin: auto !important;
     }
+
     .left-image {
         float: none !important;
         width: 100% !important;
         margin-top: 50px !important;
     }
+
     .skills-detailed {
         padding: 50px 20px !important;
     }
+
     .detailed-left {
         float: none !important;
         width: 80% !important;
         margin: auto !important;
     }
+
     .right-image {
         float: none !important;
         width: 100% !important;
         margin-top: 50px !important;
     }
+
     .third-sec {
         padding: 50px 10px !important;
     }
+
     footer {
         padding: 50px 20px !important;
         text-align: center;
@@ -78,66 +95,81 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
+
     .desc {
         padding: 0 10px;
     }
+
     .skills {
         height: auto !important;
     }
+
     .skl-sec {
         width: 16% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
+
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
+
     .second-sec {
         padding: 50px 20px !important;
     }
+
     .proj-title {
         font-size: 3em !important;
     }
+
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
+
     .project {
         margin: 15px !important;
     }
+
     .second-sec .text-section {
         float: none !important;
         margin: auto !important;
         width: 80% !important;
     }
+
     .left-image {
         float: none !important;
         width: 50% !important;
         margin: auto !important;
         margin-top: 50px !important;
     }
+
     .skills-detailed {
         padding: 50px 20px !important;
     }
+
     .detailed-left {
         float: none !important;
         width: 80% !important;
         margin: auto !important;
     }
+
     .right-image {
         float: none !important;
         width: 50% !important;
         margin: auto !important;
         margin-top: 50px !important;
     }
+
     .third-sec {
         padding: 50px 10px !important;
     }
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -151,6 +183,7 @@ a {
     background-image: url("img/info-bg.png");
     background-size: cover;
     overflow: hidden;
+    background-color: rgb(159, 114, 207);
     position: relative;
     padding: 30px;
     animation-name: color-bg-anim;
@@ -219,21 +252,21 @@ body>div {
     position: relative;
 }
 
-@keyframes color-bg-anim {
+/* @keyframes color-bg-anim {
     from {
         background-color: rgb(76, 133, 197);
     }
     to {
         background-color: rgb(159, 114, 207);
     }
-}
+} */
 
 .second-sec {
     padding: 100px;
     overflow: hidden;
-    background-color: #ecf0f1;
+    background-color: rgb(159, 114, 207);
     font-family: 'Noto Sans SC', sans-serif;
-    color: rgb(228, 220, 224);
+    color: white;
     animation-name: color-bg-anim;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -315,6 +348,7 @@ h1 i {
     from {
         background-color: rgb(255, 120, 79);
     }
+
     to {
         background-color: rgb(232, 116, 243);
     }
@@ -346,25 +380,11 @@ h1 i {
     filter: brightness(120%);
 }
 
-@keyframes color2-bg-anim {
-    from {
-        background-color: rgb(76, 153, 197);
-    }
-    to {
-        background-color: rgb(67, 158, 131);
-    }
-}
 
 .third-sec {
-    /* background-image: url("/img/sec3.png"); */
-    background-color: rgb(27, 24, 26);
-    background-size: cover;
+    background-color: rgb(76, 153, 197);
     overflow: hidden;
     padding: 100px;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-name: color2-bg-anim;
 }
 
 .proj-title {
@@ -375,13 +395,14 @@ h1 i {
     opacity: 0;
     transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
     transform: translate(0, 25%);
-    text-shadow: 0 3px 2px #0003;
+    text-shadow: 0 3px 2px #0000001a;
 }
 
 @keyframes projKey {
     from {
         color: rgb(255, 120, 79);
     }
+
     to {
         color: rgb(232, 116, 243);
     }
@@ -436,7 +457,8 @@ h1 i {
     opacity: 1 !important;
 }
 
-.skl-html:hover, .skl-html:hover .skl-rank {
+.skl-html:hover,
+.skl-html:hover .skl-rank {
     color: rgb(243, 127, 59);
 }
 
@@ -448,7 +470,8 @@ h1 i {
     transform: translate(0, 4px);
 }
 
-.skl-css:hover, .skl-css:hover .skl-rank {
+.skl-css:hover,
+.skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
 }
 
@@ -456,7 +479,8 @@ h1 i {
     fill: rgb(69, 162, 238);
 }
 
-.skl-ps:hover, .skl-ps:hover .skl-rank {
+.skl-ps:hover,
+.skl-ps:hover .skl-rank {
     color: rgb(94, 137, 218);
 }
 
@@ -464,7 +488,8 @@ h1 i {
     fill: rgb(94, 137, 218);
 }
 
-.skl-js:hover, .skl-js:hover .skl-rank {
+.skl-js:hover,
+.skl-js:hover .skl-rank {
     color: rgb(238, 212, 66);
 }
 
@@ -472,7 +497,8 @@ h1 i {
     fill: rgb(238, 212, 66);
 }
 
-.skl-jq:hover, .skl-jq:hover .skl-rank {
+.skl-jq:hover,
+.skl-jq:hover .skl-rank {
     color: rgb(152, 131, 245);
 }
 
@@ -480,7 +506,8 @@ h1 i {
     fill: rgb(152, 131, 245);
 }
 
-.skl-react:hover, .skl-react:hover .skl-rank {
+.skl-react:hover,
+.skl-react:hover .skl-rank {
     color: rgb(56, 196, 221);
 }
 
@@ -553,6 +580,7 @@ h1 i {
     from {
         background-color: rgb(76, 133, 197);
     }
+
     to {
         background-color: rgb(159, 114, 207);
     }

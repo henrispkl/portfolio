@@ -148,14 +148,14 @@ function showElements() {
 
   if (isVisible(document.querySelector(".detailed-left"), 200)) {
     document.querySelector(".detailed-left").style.opacity = "1";
+  }
+
+  if (isVisible(document.querySelector(".work-button"), 50)) {
+    document.querySelector(".work-button").style.marginLeft = "0";
+    document.querySelector(".work-button").style.opacity = "1";
     setTimeout(() => {
-      document.querySelector(".work-button").style.marginLeft = "0";
-      document.querySelector(".work-button").style.opacity = "1";
-      setTimeout(() => {
-        document.querySelector(".work-button").style.transition =
-          "0.5s all ease";
-      }, 500);
-    }, 1000);
+      document.querySelector(".work-button").style.transition = "0.5s all ease";
+    }, 500);
   }
 
   if (isVisible(projTitleElem, 150)) {
