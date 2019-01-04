@@ -36,6 +36,11 @@ setTimeout(() => {
   showMLink();
 }, 2400);
 
+setTimeout(() => {
+  document.querySelector(".desc").style.opacity = "1";
+  document.querySelector(".desc").style.transform = "translateY(0%)";
+}, 3400);
+
 function isVisible(elm, dist) {
   if (!elm.classList.contains("_shown")) {
     var rect = elm.getBoundingClientRect();
@@ -124,21 +129,34 @@ if (dvWidth > 1024) {
 
 var projTitleElem = document.getElementsByClassName("proj-title")[0];
 var projTitleName = document.getElementsByClassName("proj-titlename")[0];
-var textSectionElem = document.getElementsByClassName("text-section");
 var projects = document.getElementsByClassName("project");
 
 function showElements() {
-  if (isVisible(textSectionElem[0], 150)) {
-    textSectionElem[0].style.opacity = 1;
-    textSectionElem[0].classList.add("_shown");
+  if (isVisible(document.querySelector(".left-image"), 200)) {
+    document.querySelector(".left-image").style.opacity = "1";
+    document.querySelector(".left-image").style.transform = "translateX(0%)";
   }
 
-  setTimeout(() => {
-    if (isVisible(textSectionElem[1], 150)) {
-      textSectionElem[1].style.opacity = 1;
-      textSectionElem[1].classList.add("_shown");
-    }
-  }, 1000);
+  if (isVisible(document.querySelector(".text-section"), 200)) {
+    document.querySelector(".text-section").style.opacity = "1";
+  }
+
+  if (isVisible(document.querySelector(".right-image"), 200)) {
+    document.querySelector(".right-image").style.opacity = "1";
+    document.querySelector(".right-image").style.transform = "translateX(0%)";
+  }
+
+  if (isVisible(document.querySelector(".detailed-left"), 200)) {
+    document.querySelector(".detailed-left").style.opacity = "1";
+    setTimeout(() => {
+      document.querySelector(".work-button").style.marginLeft = "0";
+      document.querySelector(".work-button").style.opacity = "1";
+      setTimeout(() => {
+        document.querySelector(".work-button").style.transition =
+          "0.5s all ease";
+      }, 500);
+    }, 1000);
+  }
 
   if (isVisible(projTitleElem, 150)) {
     projTitleElem.style.opacity = 1;

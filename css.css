@@ -5,52 +5,69 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
-
     .desc {
         padding: 0 15px;
     }
-
     .m-link {
         margin: 5px !important;
     }
-
     .skills {
         height: auto !important;
     }
-
     .skl-sec {
         width: 30% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
-
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
-
     .second-sec {
-        background-size: cover !important;
-        background-position-x: -5% !important;
-        height: auto !important;
+        padding: 50px 20px !important;
     }
-
     .text-section {
         width: 80% !important;
     }
-
     .proj-title {
-        font-size: 50px !important;
+        font-size: 3em !important;
     }
-
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
-
     .project {
         margin: 15px !important;
+    }
+    .second-sec .text-section {
+        float: none !important;
+        margin: auto !important;
+    }
+    .left-image {
+        float: none !important;
+        width: 100% !important;
+        margin-top: 50px !important;
+    }
+    .skills-detailed {
+        padding: 50px 20px !important;
+    }
+    .detailed-left {
+        float: none !important;
+        width: 80% !important;
+        margin: auto !important;
+    }
+    .right-image {
+        float: none !important;
+        width: 100% !important;
+        margin-top: 50px !important;
+    }
+    .third-sec {
+        padding: 50px 10px !important;
+    }
+    footer {
+        padding: 50px 20px !important;
+        text-align: center;
     }
 }
 
@@ -61,64 +78,85 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
-
     .desc {
         padding: 0 10px;
     }
-
     .skills {
         height: auto !important;
     }
-
     .skl-sec {
         width: 16% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
-
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
-
     .second-sec {
-        background-size: cover !important;
-        background-position-x: -30% !important;
-        height: auto !important;
+        padding: 50px 20px !important;
     }
-
-    .text-section {
-        width: 70% !important;
-    }
-
     .proj-title {
-        font-size: 50px !important;
+        font-size: 3em !important;
     }
-
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
-
     .project {
         margin: 15px !important;
     }
+    .second-sec .text-section {
+        float: none !important;
+        margin: auto !important;
+        width: 80% !important;
+    }
+    .left-image {
+        float: none !important;
+        width: 50% !important;
+        margin: auto !important;
+        margin-top: 50px !important;
+    }
+    .skills-detailed {
+        padding: 50px 20px !important;
+    }
+    .detailed-left {
+        float: none !important;
+        width: 80% !important;
+        margin: auto !important;
+    }
+    .right-image {
+        float: none !important;
+        width: 50% !important;
+        margin: auto !important;
+        margin-top: 50px !important;
+    }
+    .third-sec {
+        padding: 50px 10px !important;
+    }
 }
 
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 .first-sec {
-    background: rgb(22, 22, 22);
-    background-image: url("img/info-bg.jpg");
+    background-image: url("img/info-bg.png");
     background-size: cover;
     overflow: hidden;
     position: relative;
     padding: 30px;
+    animation-name: color-bg-anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .main-info {
@@ -132,13 +170,12 @@ html {
 
 .avatar {
     margin: 20px auto;
-    border: 2px solid rgb(63, 63, 63);
 }
 
 .title {
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 .title>span {
@@ -157,10 +194,13 @@ html {
 }
 
 .desc {
-    color: rgb(167, 167, 167);
+    color: white;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 100;
+    transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
+    opacity: 0;
+    transform: translateY(30%);
 }
 
 .media-links {
@@ -170,81 +210,178 @@ html {
     transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
 }
 
-.second-sec {
-    height: 400px;
-    overflow: hidden;
-    background-color: rgb(28, 31, 34);
-    font-family: 'Noto Sans SC', sans-serif;
-    background-image: url("/img/sec2.png");
-    background-position-x: 120%;
-    background-repeat: no-repeat;
-    background-size: contain;
+body>div:nth-child(even) {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+body>div {
     position: relative;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.377);
 }
 
-.text-section {
-    width: 600px;
-    color: rgb(152, 163, 168);
-    margin: 50px auto;
-    font-size: 20px;
-    opacity: 0;
-    transition: 0.5s all ease-in-out;
-}
-
-.info-title {
-    font-size: 40px;
-    color: rgb(220, 226, 228);
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.info-text {
-    text-align: justify;
-}
-
-@keyframes titleB-anim {
+@keyframes color-bg-anim {
     from {
-        color: rgb(76, 133, 197);
+        background-color: rgb(76, 133, 197);
     }
-
     to {
-        color: rgb(159, 114, 207);
+        background-color: rgb(159, 114, 207);
     }
 }
 
-.info-title b {
-    color: rgb(76, 133, 197);
-    animation-name: titleB-anim;
+.second-sec {
+    padding: 100px;
+    overflow: hidden;
+    background-color: #ecf0f1;
+    font-family: 'Noto Sans SC', sans-serif;
+    color: rgb(228, 220, 224);
+    animation-name: color-bg-anim;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
+.second-sec .text-section {
+    float: right;
+}
+
+.left-image {
+    float: left;
+    width: 50%;
+    text-align: center;
+    transition: 1s all cubic-bezier(.79, .14, .15, .86);
+    opacity: 0;
+    transform: translateX(-30%);
+}
+
+.left-image img {
+    width: 80%;
+}
+
+.right-image {
+    float: right;
+    width: 50%;
+    text-align: center;
+    transition: 1s all cubic-bezier(.79, .14, .15, .86);
+    opacity: 0;
+    transform: translateX(30%);
+}
+
+.right-image img {
+    width: 80%;
+}
+
+.text-section {
+    width: 50%;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.info-title {
+    font-size: 2.5em;
+    color: rgb(220, 226, 228);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-text {
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h1 i {
+    margin-right: 0.2em;
+}
+
+.skills-detailed {
+    overflow: hidden;
+    padding: 100px;
+    background-color: #ecf0f1;
+    color: rgb(34, 34, 34);
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.detailed-left {
+    width: 50%;
+    float: left;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+@keyframes work-btn-bg {
+    from {
+        background-color: rgb(255, 120, 79);
+    }
+    to {
+        background-color: rgb(232, 116, 243);
+    }
+}
+
+.work-button {
+    color: white;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    animation-name: work-btn-bg;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-weight: bold;
+    transition: 1s all ease;
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.work-button i {
+    margin-left: .5em;
+}
+
+.work-button:hover {
+    transform: translate(10px, -5px);
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.219);
+    filter: brightness(120%);
+}
+
+@keyframes color2-bg-anim {
+    from {
+        background-color: rgb(76, 153, 197);
+    }
+    to {
+        background-color: rgb(67, 158, 131);
+    }
+}
+
 .third-sec {
-    background-image: url("/img/sec3.png");
+    /* background-image: url("/img/sec3.png"); */
     background-color: rgb(27, 24, 26);
     background-size: cover;
     overflow: hidden;
+    padding: 100px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: color2-bg-anim;
 }
 
 .proj-title {
-    font-size: 60px;
+    font-size: 3.75em;
     text-align: center;
     color: rgb(223, 223, 223);
-    margin-top: 50px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Noto Sans SC', sans-serif;
     opacity: 0;
     transition: 0.5s all cubic-bezier(.79, .14, .15, .86);
     transform: translate(0, 25%);
+    text-shadow: 0 3px 2px #0003;
 }
 
 @keyframes projKey {
     from {
         color: rgb(255, 120, 79);
     }
-
     to {
         color: rgb(232, 116, 243);
     }
@@ -252,7 +389,6 @@ html {
 
 .key {
     display: inline-block;
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 800;
 }
 
@@ -286,7 +422,7 @@ html {
 }
 
 .skl-name {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .skl-rank {
@@ -300,8 +436,7 @@ html {
     opacity: 1 !important;
 }
 
-.skl-html:hover,
-.skl-html:hover .skl-rank {
+.skl-html:hover, .skl-html:hover .skl-rank {
     color: rgb(243, 127, 59);
 }
 
@@ -313,8 +448,7 @@ html {
     transform: translate(0, 4px);
 }
 
-.skl-css:hover,
-.skl-css:hover .skl-rank {
+.skl-css:hover, .skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
 }
 
@@ -322,8 +456,7 @@ html {
     fill: rgb(69, 162, 238);
 }
 
-.skl-ps:hover,
-.skl-ps:hover .skl-rank {
+.skl-ps:hover, .skl-ps:hover .skl-rank {
     color: rgb(94, 137, 218);
 }
 
@@ -331,8 +464,7 @@ html {
     fill: rgb(94, 137, 218);
 }
 
-.skl-js:hover,
-.skl-js:hover .skl-rank {
+.skl-js:hover, .skl-js:hover .skl-rank {
     color: rgb(238, 212, 66);
 }
 
@@ -340,17 +472,15 @@ html {
     fill: rgb(238, 212, 66);
 }
 
-.skl-jq:hover,
-.skl-jq:hover .skl-rank {
-    color: rgb(93, 90, 241);
+.skl-jq:hover, .skl-jq:hover .skl-rank {
+    color: rgb(152, 131, 245);
 }
 
 .skl-jq:hover .skl-icon {
-    fill: rgb(93, 90, 241);
+    fill: rgb(152, 131, 245);
 }
 
-.skl-react:hover,
-.skl-react:hover .skl-rank {
+.skl-react:hover, .skl-react:hover .skl-rank {
     color: rgb(56, 196, 221);
 }
 
@@ -362,7 +492,7 @@ html {
     color: rgba(255, 255, 255, 0.678);
     width: 200px;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 12px;
+    font-size: 0.75em;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 35px;
@@ -380,7 +510,8 @@ html {
 }
 
 .proj-list {
-    padding: 70px;
+    padding: 50px;
+    padding-bottom: 0;
     text-align: center;
 }
 
@@ -390,8 +521,8 @@ html {
     background-color: rgb(121, 121, 121);
     display: inline-block;
     margin: 20px;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
+    border-radius: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.233);
     opacity: 0;
     text-decoration: none;
     font-family: 'Source Sans Pro', sans-serif;
@@ -405,6 +536,7 @@ html {
     overflow: hidden;
     transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
+    border-radius: 100%;
 }
 
 .project:hover .project-info {
@@ -414,41 +546,87 @@ html {
 .project-title {
     color: white;
     margin-top: 70px;
-    font-size: 25px;
+    font-size: 1.5em;
 }
 
 @keyframes vProj {
     from {
         background-color: rgb(76, 133, 197);
     }
-
     to {
         background-color: rgb(159, 114, 207);
     }
 }
 
 .view-project {
-    color: rgb(255, 255, 255);
     position: relative;
     top: 50px;
     padding: 10px;
-    font-size: 15px;
-    width: 150px;
-    margin: 0 auto;
-    border-radius: 2px;
-    cursor: pointer;
     transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
-    animation-name: vProj;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    font-size: 0.8em;
+    margin: 0 auto;
+    border-radius: 2px 0px 2px 0px;
+    cursor: pointer;
     font-weight: bold;
     display: block;
     text-decoration: none;
+    margin-top: -150px;
+    color: transparent;
+    background-color: transparent;
 }
 
-.view-project:hover {
-    filter: brightness(130%);
+.project:hover .view-project {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(159, 114, 207);
+}
+
+.project:hover .triangle-left {
+    border-color: transparent rgb(107, 77, 139) transparent transparent;
+}
+
+.project:hover .triangle-right {
+    border-color: rgb(107, 77, 139) transparent transparent transparent;
+}
+
+.view-project:hover .hover-effect {
+    opacity: 0.2;
+}
+
+.hover-effect {
+    width: 100%;
+    background: white;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    margin: -10px;
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
+}
+
+.triangle-left {
+    position: relative;
+    float: left;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border-style: solid;
+    border-width: 0 30px 20px 0;
+    border-color: transparent;
+    transform: translate(-10px, 10px);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
+}
+
+.triangle-right {
+    position: relative;
+    float: right;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border-style: solid;
+    border-width: 20px 30px 0 0;
+    border-color: transparent;
+    transform: translate(10px, 10px);
+    transition: 0.3s all cubic-bezier(.79, .14, .15, .86);
 }
 
 .minimum {
@@ -496,4 +674,21 @@ html {
     color: rgb(216, 216, 216);
     text-decoration: none;
     vertical-align: super;
+}
+
+footer {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: rgb(22, 22, 22);
+    overflow: hidden;
+    color: rgb(240, 240, 240);
+    padding: 50px;
+}
+
+footer a {
+    color: rgb(76, 133, 197);
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: rgb(159, 114, 207);
 }
