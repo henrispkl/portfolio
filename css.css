@@ -201,10 +201,6 @@ a {
     transform: translate(0, 5%);
 }
 
-.avatar {
-    margin: 20px auto;
-}
-
 .title {
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
@@ -219,8 +215,10 @@ a {
 }
 
 .avatar {
-    width: 200px;
-    height: 200px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px #0000004d;
+    width: 250px;
+    height: 250px;
     background-image: url("/img/avatar.jpg");
     background-size: cover;
     border-radius: 100%;
@@ -273,6 +271,17 @@ body>div {
     animation-direction: alternate;
 }
 
+.center-float {
+    float: right;
+    position: relative;
+    left: -50%;
+}
+
+.center-float>* {
+    position: relative;
+    left: 50%;
+}
+
 .second-sec .text-section {
     float: right;
 }
@@ -284,6 +293,7 @@ body>div {
     transition: 1s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
     transform: translateX(-30%);
+    max-width: 574.5px;
 }
 
 .left-image img {
@@ -297,6 +307,7 @@ body>div {
     transition: 1s all cubic-bezier(.79, .14, .15, .86);
     opacity: 0;
     transform: translateX(30%);
+    max-width: 574.5px;
 }
 
 .right-image img {
@@ -307,6 +318,7 @@ body>div {
     width: 50%;
     opacity: 0;
     transition: 1s all ease;
+    max-width: 574.5px;
 }
 
 .info-title {
@@ -342,6 +354,7 @@ h1 i {
     float: left;
     opacity: 0;
     transition: 1s all ease;
+    max-width: 574.5px;
 }
 
 @keyframes work-btn-bg {

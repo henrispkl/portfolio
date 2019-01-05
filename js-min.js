@@ -9,11 +9,11 @@ if(i==sklSec.length-1){}else{sklSec[i].nextElementSibling.style.transform="scale
 var _shownSkl=!1;function executeShowSkl(){if(isVisible(document.getElementsByClassName("skills")[0],100)){if(_shownSkl==!1){showSkl()}
 _shownSkl=!0}}
 window.addEventListener("scroll",executeShowSkl)}
-var projTitleElem=document.getElementsByClassName("proj-title")[0];var projTitleName=document.getElementsByClassName("proj-titlename")[0];var projects=document.getElementsByClassName("project");function showElements(){if(isVisible(document.querySelector(".left-image"),200)){document.querySelector(".left-image").style.opacity="1";document.querySelector(".left-image").style.transform="translateX(0%)"}
-if(isVisible(document.querySelector(".text-section"),200)){document.querySelector(".text-section").style.opacity="1"}
-if(isVisible(document.querySelector(".right-image"),200)){document.querySelector(".right-image").style.opacity="1";document.querySelector(".right-image").style.transform="translateX(0%)"}
-if(isVisible(document.querySelector(".detailed-left"),200)){document.querySelector(".detailed-left").style.opacity="1"}
+var projTitleElem=document.getElementsByClassName("proj-title")[0];var projTitleName=document.getElementsByClassName("proj-titlename")[0];var projects=document.getElementsByClassName("project");function showElements(){if(isVisible(document.querySelector(".left-image"),50)){document.querySelector(".left-image").style.opacity="1";document.querySelector(".left-image").style.transform="translateX(0%)"}
+if(isVisible(document.querySelector(".text-section"),50)){document.querySelector(".text-section").style.opacity="1"}
+if(isVisible(document.querySelector(".right-image"),50)){document.querySelector(".right-image").style.opacity="1";document.querySelector(".right-image").style.transform="translateX(0%)"}
+if(isVisible(document.querySelector(".detailed-left"),50)){document.querySelector(".detailed-left").style.opacity="1"}
 if(isVisible(document.querySelector(".work-button"),50)){document.querySelector(".work-button").style.marginLeft="0";document.querySelector(".work-button").style.opacity="1";setTimeout(()=>{document.querySelector(".work-button").style.transition="0.5s all ease"},500)}
-if(isVisible(projTitleElem,150)){projTitleElem.style.opacity=1;projTitleElem.style.transform="translate(0)";projTitleElem.classList.add("_shown");var spi=0;function showProject(){setTimeout(function(){projects[spi].style.opacity="1";spi++;if(spi<projects.length){showProject()}},250)}
+if(isVisible(projTitleElem,50)){projTitleElem.style.opacity=1;projTitleElem.style.transform="translate(0)";projTitleElem.classList.add("_shown");var spi=0;function showProject(){setTimeout(function(){projects[spi].style.opacity="1";spi++;if(spi<projects.length){showProject()}},250)}
 setTimeout(function(){showProject()},500)}}
-window.addEventListener("scroll",showElements)
+window.addEventListener("scroll",showElements);showElements()
