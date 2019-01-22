@@ -5,83 +5,66 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
-
     .desc {
         padding: 0 15px;
     }
-
     .m-link {
         margin: 5px !important;
     }
-
     .skills {
         height: auto !important;
     }
-
     .skl-sec {
         width: 30% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
-
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
-
     .second-sec {
         padding: 50px 20px !important;
     }
-
     .text-section {
         width: 80% !important;
     }
-
     .proj-title {
         font-size: 3em !important;
     }
-
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
-
     .project {
         margin: 15px !important;
     }
-
     .second-sec .text-section {
         float: none !important;
         margin: auto !important;
     }
-
     .left-image {
         float: none !important;
         width: 100% !important;
         margin-top: 50px !important;
     }
-
     .skills-detailed {
         padding: 50px 20px !important;
     }
-
     .detailed-left {
         float: none !important;
         width: 80% !important;
         margin: auto !important;
     }
-
     .right-image {
         float: none !important;
         width: 100% !important;
         margin-top: 50px !important;
     }
-
     .third-sec {
         padding: 50px 10px !important;
     }
-
     footer {
         padding: 50px 20px !important;
         text-align: center;
@@ -95,50 +78,40 @@
         padding: 50px 0px !important;
         padding-top: 0 !important;
     }
-
     .desc {
         padding: 0 10px;
     }
-
     .skills {
         height: auto !important;
     }
-
     .skl-sec {
         width: 16% !important;
         margin: 20px 0 !important;
         opacity: 0;
     }
-
     .skills-title {
         margin-bottom: 0 !important;
         margin-top: 0 !important;
     }
-
     .second-sec {
         padding: 50px 20px !important;
     }
-
     .proj-title {
         font-size: 3em !important;
     }
-
     .proj-list {
         padding: 10px !important;
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
-
     .project {
         margin: 15px !important;
     }
-
     .second-sec .text-section {
         float: none !important;
         margin: auto !important;
         width: 80% !important;
     }
-
     .left-image {
         float: none !important;
         width: 50% !important;
@@ -146,17 +119,14 @@
         margin-top: 50px !important;
         min-width: 480px;
     }
-
     .skills-detailed {
         padding: 50px 20px !important;
     }
-
     .detailed-left {
         float: none !important;
         width: 80% !important;
         margin: auto !important;
     }
-
     .right-image {
         float: none !important;
         width: 50% !important;
@@ -164,14 +134,12 @@
         margin-top: 50px !important;
         min-width: 480px;
     }
-
     .third-sec {
         padding: 50px 10px !important;
     }
 }
 
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -363,7 +331,6 @@ h1 i {
     from {
         background-color: rgb(255, 120, 79);
     }
-
     to {
         background-color: rgb(232, 116, 243);
     }
@@ -416,7 +383,6 @@ h1 i {
     from {
         color: rgb(255, 120, 79);
     }
-
     to {
         color: rgb(232, 116, 243);
     }
@@ -471,8 +437,7 @@ h1 i {
     opacity: 1 !important;
 }
 
-.skl-html:hover,
-.skl-html:hover .skl-rank {
+.skl-html:hover, .skl-html:hover .skl-rank {
     color: rgb(243, 127, 59);
 }
 
@@ -484,8 +449,7 @@ h1 i {
     transform: translate(0, 4px);
 }
 
-.skl-css:hover,
-.skl-css:hover .skl-rank {
+.skl-css:hover, .skl-css:hover .skl-rank {
     color: rgb(69, 162, 238);
 }
 
@@ -493,8 +457,7 @@ h1 i {
     fill: rgb(69, 162, 238);
 }
 
-.skl-ps:hover,
-.skl-ps:hover .skl-rank {
+.skl-ps:hover, .skl-ps:hover .skl-rank {
     color: rgb(94, 137, 218);
 }
 
@@ -502,8 +465,7 @@ h1 i {
     fill: rgb(94, 137, 218);
 }
 
-.skl-js:hover,
-.skl-js:hover .skl-rank {
+.skl-js:hover, .skl-js:hover .skl-rank {
     color: rgb(238, 212, 66);
 }
 
@@ -511,8 +473,7 @@ h1 i {
     fill: rgb(238, 212, 66);
 }
 
-.skl-jq:hover,
-.skl-jq:hover .skl-rank {
+.skl-jq:hover, .skl-jq:hover .skl-rank {
     color: rgb(152, 131, 245);
 }
 
@@ -520,8 +481,7 @@ h1 i {
     fill: rgb(152, 131, 245);
 }
 
-.skl-react:hover,
-.skl-react:hover .skl-rank {
+.skl-react:hover, .skl-react:hover .skl-rank {
     color: rgb(56, 196, 221);
 }
 
@@ -594,7 +554,6 @@ h1 i {
     from {
         background-color: rgb(76, 133, 197);
     }
-
     to {
         background-color: rgb(159, 114, 207);
     }
@@ -683,8 +642,8 @@ h1 i {
     background-image: url("/img/ico-alexa.jpg");
 }
 
-.herzel {
-    background-image: url("/img/ico-herzel.jpg");
+.tempest {
+    background-image: url("/img/ico-tempest.jpg");
 }
 
 .blankproj {

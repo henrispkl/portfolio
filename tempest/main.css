@@ -1,0 +1,265 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#navbarTop {
+    font-family: "Montserrat";
+    font-size: .75em;
+    font-weight: 700;
+}
+
+#navbarTop .active .nav-link {
+    color: #10c9c3;
+}
+
+.greyText {
+    color: rgb(56, 56, 56);
+}
+
+.navbar-brand {
+    color: rgb(36, 36, 36);
+}
+
+.navbar-brand>.fa-circle-notch {
+    color: #10c9c3;
+}
+
+#firstSec {
+    background: #e9e9e9;
+}
+
+#contactButton {
+    padding: 15px 35px;
+    font-size: 0.75em;
+    color: white;
+    background: #10c9c3;
+    cursor: pointer;
+    border: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#contactButton:hover {
+    background: #41e7e2;
+
+}
+
+#secondSec {
+    padding: 4rem 2rem;
+}
+
+.about-signature {
+    width: 180px;
+}
+
+#skl-left {
+    background-color: #f8f9f9;
+    padding: 6rem 2rem;
+}
+
+#skl-right {
+    background-color: #e9e9e9;
+    padding: 6rem 8rem;
+}
+
+.skill-title {
+    font-weight: 700;
+    font-size: .9em;
+}
+
+.skill-bar {
+    background-color: #e9e9e9;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.skill-progress {
+    background-color: #10c9c3;
+    height: 100%;
+}
+
+#stats {
+    background-color: #10c9c3;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+#stats i {
+    font-size: 2.25em;
+    min-height: 50px;
+}
+
+#stats h6 {
+    margin-bottom: 0;
+}
+
+#stats p {
+    font-size: .85em;
+    margin-bottom: 0;
+}
+
+#projects>.d-flex>div {
+    padding: 0;
+}
+
+#workProcess {
+    background-color: #fff;
+    padding: 4rem 1em;
+}
+
+#skills2 {
+    background-color: #f5f5f5;
+    padding: 5rem 0;
+}
+
+#skills2 i {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+#quotesCarousel {
+    background-color: #10c9c3;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#quotesCarousel .carousel-inner {
+    padding: 5px;
+    height: 500px;
+}
+
+#quotesCarousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    transform: scale(0.5);
+}
+
+#quotesCarousel .carousel-indicators li.active {
+    transform: scale(1);
+}
+
+.qFooter {
+    text-transform: uppercase;
+    font-size: .7em;
+}
+
+#companies {
+    background-color: #fff;
+}
+
+#contact {
+    background-color: #f5f5f5;
+    padding: 4rem 2rem;
+}
+
+#sendMessage {
+    padding: 15px 35px;
+    font-size: 0.75em;
+    color: white;
+    background: #10c9c3;
+    cursor: pointer;
+    border: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#sendMessage:hover {
+    background: #41e7e2;
+
+}
+
+#contact input,
+#contact textarea {
+    border: 0;
+}
+
+footer {
+    background-color: rgb(12, 12, 12);
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+@media (min-width: 470px) {
+    #quotesCarousel .carousel-inner {
+        padding: 30px;
+        height: 450px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #quotesCarousel .carousel-inner {
+        padding: 60px;
+        height: 400px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .about-text {
+        width: 75%;
+    }
+
+    #secondSec {
+        padding: 6rem 2rem;
+    }
+
+    #skl-left {
+        padding: 6rem 8rem;
+    }
+
+    #stats {
+        text-align: left;
+    }
+
+    #stats i {
+        float: left;
+    }
+
+    #workProcess {
+        padding: 6rem;
+    }
+
+    #quotesCarousel .carousel-inner {
+        padding: 100px;
+    }
+
+    #contact {
+        padding: 6rem 2rem;
+    }
+
+    #contact .form-group {
+        width: 50%;
+    }
+
+    #contact p {
+        width: 50%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #stats {
+        padding: 4rem 8rem;
+    }
+
+    #quotesCarousel .carousel-inner {
+        height: 350px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /*  */
+}
