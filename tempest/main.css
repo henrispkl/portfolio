@@ -5,6 +5,22 @@ body {
     font-family: "Montserrat";
 }
 
+/* Transparency */
+
+#title1, #text1, #contactButton, #aboutUs, #aboutText, #aboutImg, #professionalSkills, .skill-sec, .skill-progress, .stat, #workProcessTitle, #workProcessText, .skill2 {
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(.77,0,.18,1);
+}
+
+#contactButton, .skill2 {
+    transform: translateY(-30%);
+}
+
+.skill-progress-zero {
+    width: 0% !important;
+}
+
+/* ************ */
 .form-control:focus {
     box-shadow: none;
 }
