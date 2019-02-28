@@ -6,6 +6,7 @@ let mainDesc = document.getElementById("main-desc");
 let mainButton = document.getElementById("main-button");
 let blob = document.getElementById("blob");
 let moreAboutText = document.getElementById("moreAboutText");
+let about = document.getElementById("about");
 let avatar = document.getElementById("avatar");
 let fadeInScroll = document.getElementsByClassName("fadeInScroll");
 let fadeInScroll2 = document.getElementsByClassName("fadeInScroll2");
@@ -21,6 +22,28 @@ blob.style.height = blob.clientWidth + "px";
 window.addEventListener("resize", () => {
   blob.style.height = blob.clientWidth + "px";
 });
+
+function doScrolling(elementY, duration) {
+  var startingY = window.pageYOffset;
+  var diff = elementY - startingY;
+  var start;
+
+  // Bootstrap our animation - it will get called right before next frame shall be rendered.
+  window.requestAnimationFrame(function step(timestamp) {
+    if (!start) start = timestamp;
+    // Elapsed milliseconds since start of scrolling.
+    var time = timestamp - start;
+    // Get percent of completion in range [0, 1].
+    var percent = Math.min(time / duration, 1);
+
+    window.scrollTo(0, startingY + diff * percent);
+
+    // Proceed with animation as long as we wanted it to.
+    if (time < duration) {
+      window.requestAnimationFrame(step);
+    }
+  });
+}
 
 function scrollShow(element, distance = 0, markShown = true) {
   function execute() {
@@ -120,6 +143,15 @@ elementsToShow();
 
 document.addEventListener("scroll", () => {
   elementsToShow();
+});
+
+// Learn more about me click function
+
+moreAboutText.addEventListener("click", () => {
+  let bodyRect = document.body.getBoundingClientRect();
+  let elemRect = about.getBoundingClientRect();
+  let offset = elemRect.top - bodyRect.top;
+  doScrolling(offset, 800);
 });
 
 // Formatting tags
@@ -270,8 +302,11 @@ function checkContactMessage() {
 }
 
 // trigger the function above
-contactTextarea.addEventListener("keydown", checkContactMessage);
-contactTextarea.addEventListener("click", checkContactMessage);
+setInterval(() => {
+  if (contactTextarea === document.activeElement) {
+    checkContactMessage();
+  }
+}, 100);
 
 // submit the form
 contactSubmitButton.addEventListener("click", () => {
@@ -279,4 +314,3 @@ contactSubmitButton.addEventListener("click", () => {
     contactForm.submit();
   }
 });
-

@@ -140,7 +140,7 @@ $gridColumns: 12;
     opacity: 0;
     transform: translateY(-10%);
     transition: $secondTransition;
-    cursor: default;
+    cursor: pointer;
     will-change: transform, opacity;
 
     i {

@@ -146,7 +146,7 @@ a {
   opacity: 0;
   transform: translateY(-10%);
   transition: all 1s ease;
-  cursor: default;
+  cursor: pointer;
   will-change: transform, opacity;
 }
 #moreAboutText i {
