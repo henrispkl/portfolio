@@ -150,7 +150,8 @@ moreAboutText.addEventListener("click", () => {
   let bodyRect = document.body.getBoundingClientRect();
   let elemRect = about.getBoundingClientRect();
   let offset = elemRect.top - bodyRect.top;
-  doScrolling(offset, 2000);
+  let time = (offset - window.scrollY) * 1.3;
+  doScrolling(offset, time);
 });
 
 // Formatting tags
