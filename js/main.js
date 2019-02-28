@@ -146,12 +146,11 @@ document.addEventListener("scroll", () => {
 });
 
 // Learn more about me click function
-
 moreAboutText.addEventListener("click", () => {
   let bodyRect = document.body.getBoundingClientRect();
   let elemRect = about.getBoundingClientRect();
   let offset = elemRect.top - bodyRect.top;
-  doScrolling(offset, 800);
+  doScrolling(offset, 2000);
 });
 
 // Formatting tags
