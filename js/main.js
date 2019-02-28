@@ -145,7 +145,7 @@ document.addEventListener("scroll", () => {
   elementsToShow();
 });
 
-// Learn more about me click function
+// Learn more scroll click event
 moreAboutText.addEventListener("click", () => {
   let bodyRect = document.body.getBoundingClientRect();
   let elemRect = about.getBoundingClientRect();
