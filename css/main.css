@@ -321,10 +321,6 @@ a {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.32);
 }
 
-.last-project {
-  transform: translateX(calc(-50% - 10px)) !important;
-}
-
 #clientcommand {
   background-image: url("/img/clientcommand.jpg");
 }

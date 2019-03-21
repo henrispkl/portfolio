@@ -316,10 +316,6 @@ $gridColumns: 12;
   box-shadow: $lightShadow;
 }
 
-.last-project {
-  transform: translateX(calc(-50% - 10px)) !important;
-}
-
 #clientcommand {
   background-image: url("/img/clientcommand.jpg");
 }

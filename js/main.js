@@ -228,7 +228,10 @@ if (browserWidth >= 992) {
 
   // if the project length are odd, align the last one to the left
   if (project.length % 2 != 0) {
-    project[project.length - 1].classList.add("last-project");
+    let proj = project[project.length - 1];
+    let projWidth = proj.offsetWidth;
+    proj.style.position = "relative";
+    proj.style.left = "-" + (projWidth / 2 + 10) + "px";
   }
 }
 
@@ -271,7 +274,7 @@ for (let i = 0; i < cert.length; i++) {
     certImg.src = img;
     certImg.alt = "";
 
-    document.addEventListener("click", function(event) {
+    document.addEventListener("click", function (event) {
       let clickTarget = event.target;
 
       if (clickTarget == certModal) {
