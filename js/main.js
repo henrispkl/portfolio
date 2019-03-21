@@ -225,6 +225,11 @@ if (browserWidth >= 992) {
       gridMarginElement.style.marginTop = elementMargin * 2 - 10 + "px";
     }
   }
+
+  // if the project length are odd, align the last one to the left
+  if (project.length % 2 != 0) {
+    project[project.length - 1].classList.add("last-project");
+  }
 }
 
 // Certifications

@@ -1,5 +1,5 @@
-$mainTransition: all 0.5s cubic-bezier(.86, 0, .07, 1);
-$mainTransition2: all 0.7s cubic-bezier(.86, 0, .07, 1);
+$mainTransition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+$mainTransition2: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
 $secondTransition: all 1s ease;
 $secondTransition2: all 0.5s ease;
 
@@ -26,15 +26,15 @@ $mutedColor3: #272727;
 $lightShadow: 0 3px 10px rgba(0, 0, 0, 0.32);
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 // Grid system
@@ -42,716 +42,722 @@ $gridColumns: 12;
 
 // Extra small devices (portrait phones, less than 576px)
 @for $i from 1 through $gridColumns {
-    .col-#{$i} {
-        width: percentage($i / $gridColumns);
-    }
+  .col-#{$i} {
+    width: percentage($i / $gridColumns);
+  }
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #top-main {
-    background: linear-gradient($firstColorLight, $firstColor);
+  background: linear-gradient($firstColorLight, $firstColor);
 }
 
 #main-box {
-    text-align: center;
-    margin: 0;
-    padding: 2em;
-    padding-bottom: 0;
-    z-index: 1;
+  text-align: center;
+  margin: 0;
+  padding: 2em;
+  padding-bottom: 0;
+  z-index: 1;
 }
 
 #main-text {
-    font-size: 3.5em;
-    margin: 0;
+  font-size: 3.5em;
+  margin: 0;
 
-    div {
-        opacity: 0;
-        transition: $mainTransition;
-        transform: translateY(30%);
-        display: inline-block;
-        color: $whiteColor;
-        font-size: 1em;
-        will-change: transform, opacity;
-    }
+  div {
+    opacity: 0;
+    transition: $mainTransition;
+    transform: translateY(30%);
+    display: inline-block;
+    color: $whiteColor;
+    font-size: 1em;
+    will-change: transform, opacity;
+  }
 }
 
-
 #main-desc-div {
-    padding: 2em;
-    z-index: 1;
+  padding: 2em;
+  z-index: 1;
 }
 
 #main-desc {
-    margin: 0;
-    font-size: 1.5em;
-    color: $whiteColor;
-    transition: $secondTransition;
-    opacity: 0;
-    will-change: opacity;
+  margin: 0;
+  font-size: 1.5em;
+  color: $whiteColor;
+  transition: $secondTransition;
+  opacity: 0;
+  will-change: opacity;
 }
 
-
 #main-button {
-    transition: $mainTransition;
-    opacity: 0;
-    align-self: flex-end;
-    margin-top: 20px;
-    transform: translateY(-30%);
-    border-radius: 5px;
-    will-change: transform, opacity;
+  transition: $mainTransition;
+  opacity: 0;
+  align-self: flex-end;
+  margin-top: 20px;
+  transform: translateY(-30%);
+  border-radius: 5px;
+  will-change: transform, opacity;
 }
 
 #main-blob-area {
-    position: absolute;
-    width: 100%;
-    top: 5%;
-    left: 0;
-    z-index: 0;
-    display: none;
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 0;
+  z-index: 0;
+  display: none;
 }
 
 #blob {
-    background: linear-gradient($thirdColor, transparent);
-    width: 80%;
-    border-radius: 50%;
-    align-self: flex-end;
+  background: linear-gradient($thirdColor, transparent);
+  width: 80%;
+  border-radius: 50%;
+  align-self: flex-end;
 }
 
 @keyframes downArrow {
-    from {
-        transform: translateY(30%);
-    }
-    
-    to {
-        transform: translateY(0%);
-    }
+  from {
+    transform: translateY(30%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
 
 #moreAboutText {
-    z-index: 1;
-    text-align: center;
-    color: $whiteColor;
-    margin-bottom: 20px;
-    font-size: 1.3em;
-    opacity: 0;
-    transform: translateY(-10%);
-    transition: $secondTransition;
-    cursor: pointer;
-    will-change: transform, opacity;
+  z-index: 1;
+  text-align: center;
+  color: $whiteColor;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: $secondTransition;
+  cursor: pointer;
+  will-change: transform, opacity;
 
-    i {
-        animation-name: downArrow;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
+  i {
+    animation-name: downArrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 }
 
 #about {
-    background-color: $secondColor;
-    min-height: 770px;
-    position: relative;
-    box-shadow: inset 0px -8px 10px -10px #0006;
+  background-color: $secondColor;
+  min-height: 770px;
+  position: relative;
+  box-shadow: inset 0px -8px 10px -10px #0006;
 }
 
 #aboutMe {
-    justify-content: center;
-    padding: 50px 0;
+  justify-content: center;
+  padding: 50px 0;
 }
 
 #avatarDiv {
-    text-align: center;
+  text-align: center;
 }
 
 #avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    box-shadow: $lightShadow;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: $lightShadow;
 }
 
 #aboutSec {
-    color: $whiteColor;
-    padding: 0 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+  color: $whiteColor;
+  padding: 0 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 
-    h1 {
-        text-align: center;
-        font-size: 2.5em;
-    }
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+  }
 }
 
-
 .aboutText {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 0;
-    transition: $mainTransition2;
-    transform: translateY(-30%);
-    opacity: 0;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 0;
+  transition: $mainTransition2;
+  transform: translateY(-30%);
+  opacity: 0;
 }
 
 #skills {
-    background-color: $whiteColor;
-    z-index: 10;
-
+  background-color: $whiteColor;
+  z-index: 10;
 }
 
 #skills-table {
-    background-color: $whiteColor;
-    border-radius: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: -15%;
-    position: relative;
-    text-align: center;
-    border: 1px solid $mutedColor;
-    max-width: 1150px;
+  background-color: $whiteColor;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -15%;
+  position: relative;
+  text-align: center;
+  border: 1px solid $mutedColor;
+  max-width: 1150px;
 }
 
 .skill-col {
-    padding: 50px;
+  padding: 50px;
 }
 
 .skill-col:first-child {
-    border-bottom: 1px solid $mutedColor;
+  border-bottom: 1px solid $mutedColor;
 }
 
 .skill-icon {
-    font-size: 3em;
-    color: $thirdColor;
+  font-size: 3em;
+  color: $thirdColor;
 }
 
 .skill-desc {
-    font-size: 1.2em;
-    color: $mutedColor2;
+  font-size: 1.2em;
+  color: $mutedColor2;
 }
 
 .skill-desc-primary {
-    color: $thirdColor;
+  color: $thirdColor;
 }
 
 .fadeInScroll {
-    transition: $mainTransition2;
-    transform: translateY(-30%) rotateX(120deg);
-    opacity: 0;
-    will-change: transform, opacity;
+  transition: $mainTransition2;
+  transform: translateY(-30%) rotateX(120deg);
+  opacity: 0;
+  will-change: transform, opacity;
 }
 
 .fadeInScroll2 {
-    transition: $mainTransition2;
-    transform: rotateX(50deg);
-    opacity: 0;
-    will-change: transform, opacity;
+  transition: $mainTransition2;
+  transform: rotateX(50deg);
+  opacity: 0;
+  will-change: transform, opacity;
 }
 
 #certifications {
-    text-align: center;
-    max-width: 1350px;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cert {
-    width: 125px;
-    cursor: pointer;
-    transition: $secondTransition2;
-    opacity: 0.5;
-    margin: 0 5px;
+  width: 125px;
+  cursor: pointer;
+  transition: $secondTransition2;
+  opacity: 0.5;
+  margin: 0 5px;
 
-    &:hover {
-        opacity: 1;
-        transform: scale(1.05);
-    }
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 .certBig {
-    margin: 20px 0px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 5px;
-    border-radius: 5px;
-    width: (800px / 2.3);
-    height: (597px / 2.3);
+  margin: 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 5px;
+  border-radius: 5px;
+  width: (800px / 2.3);
+  height: (597px / 2.3);
 }
 
 #projects {
-    padding: 20px;
-    background-color: $whiteColor;
-    position: relative;
-    max-width: 1350px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    box-shadow: 0 5px 5px #0000001a;
+  padding: 20px;
+  background-color: $whiteColor;
+  position: relative;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  box-shadow: 0 5px 5px #0000001a;
 }
 
 #title-div {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 #projectsTitle {
-    margin: 0;
-    text-align: center;
-    font-size: 3em;
+  margin: 0;
+  text-align: center;
+  font-size: 3em;
 }
 
 .line {
-    height: 1px;
-    background-color: $mutedColor;
+  height: 1px;
+  background-color: $mutedColor;
 }
 
 #project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
-    border-radius: 5px;
-    margin: 10px 0;
-    width: 500px;
-    box-shadow: $lightShadow;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 500px;
+  box-shadow: $lightShadow;
+}
+
+.last-project {
+  transform: translateX(calc(-50% - 10px)) !important;
+}
+
+#clientcommand {
+  background-image: url("/img/clientcommand.jpg");
 }
 
 #tempest {
-    background-image: url("/img/tempest.jpg");
+  background-image: url("/img/tempest.jpg");
 }
 
 #alexa {
-    background-image: url("/img/alexa.jpg");
+  background-image: url("/img/alexa.jpg");
 }
 
 #travelfy {
-    background-image: url("/img/travelfy.jpg");
+  background-image: url("/img/travelfy.jpg");
 }
 
 #minimum {
-    background-image: url("/img/minimum.jpg");
+  background-image: url("/img/minimum.jpg");
 }
 
 .project-body {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: black;
-    background-size: 110%;
-    height: 225px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    transition: $secondTransition2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 110%;
+  height: 225px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: $secondTransition2;
 
-    &:hover {
-        background-size: 115%;
-    }
+  &:hover {
+    background-size: 115%;
+  }
 
-    &:hover .project-info {
-        opacity: 1;
-    }
+  &:hover .project-info {
+    opacity: 1;
+  }
 }
 
 .project-footer {
-    background-color: $mutedColor3;
-    box-shadow: inset 0 0 10px -1px rgba(0, 0, 0, 0.541);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    text-align: center;
+  background-color: $mutedColor3;
+  box-shadow: inset 0 0 10px -1px rgba(0, 0, 0, 0.541);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
 }
 
 .project-tags {
-    padding: 15px;
+  padding: 15px;
 }
 
 .project-tag {
-    display: inline-block;
-    color: $firstColorText;
-    background-color: $firstColor;
-    border-bottom: 2px solid $firstColorDark;
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: default;
-    border-radius: 2px;
+  display: inline-block;
+  color: $firstColorText;
+  background-color: $firstColor;
+  border-bottom: 2px solid $firstColorDark;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: default;
+  border-radius: 2px;
 
-    i {
-        margin-right: 0.5em;
-        font-size: 0.8em;
-    }
+  i {
+    margin-right: 0.5em;
+    font-size: 0.8em;
+  }
 }
 
 .project-info {
-    background-color: rgba(0, 0, 0, 0.493);
-    height: 100%;
-    position: relative;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: center;
-    transition: $secondTransition2;
-    display: flex;
-    opacity: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.493);
+  height: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+  transition: $secondTransition2;
+  display: flex;
+  opacity: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .project-name {
-    width: 100%;
-    color: $whiteColor;
-    font-size: 2em;
-    height: 70%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  color: $whiteColor;
+  font-size: 2em;
+  height: 70%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .project-link {
-    transition: $secondTransition2 !important;
-    display: flex;
-    align-items: center;
+  transition: $secondTransition2 !important;
+  display: flex;
+  align-items: center;
 
-    i {
-        margin-left: 0.5em;
-
-    }
+  i {
+    margin-left: 0.5em;
+  }
 }
 
 #contact {
-    background-color: $thirdColor;
-    color: $thirdColorText;
-    padding: 50px 0;
-    position: relative;
+  background-color: $thirdColor;
+  color: $thirdColorText;
+  padding: 50px 0;
+  position: relative;
 
-    &>.row {
-        justify-content: center;
-        max-width: 1350px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  & > .row {
+    justify-content: center;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    h1 {
-        font-size: 3em;
-        text-align: center;
-        margin: 0;
-    }
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+  }
 
-    p {
-        font-size: 1.5em;
-        margin: 0;
-        text-align: center;
-    }
+  p {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+  }
 
-    form {
-        margin-top: 50px;
-    }
+  form {
+    margin-top: 50px;
+  }
 
-    #form-row2 {
-        margin-top: 20px;
-    }
+  #form-row2 {
+    margin-top: 20px;
+  }
 
-    #form-row>div:first-child {
-        margin-bottom: 20px;
-    }
+  #form-row > div:first-child {
+    margin-bottom: 20px;
+  }
 
-    #contactTextarea {
-        margin-top: 20px;
-        height: 250px;
-    }
+  #contactTextarea {
+    margin-top: 20px;
+    height: 250px;
+  }
 
-    #contactSubmit {
-        width: auto;
-        padding: 0;
-        background: none;
-        color: $whiteColor;
-        cursor: pointer;
-    }
+  #contactSubmit {
+    width: auto;
+    padding: 0;
+    background: none;
+    color: $whiteColor;
+    cursor: pointer;
+  }
 
-    .button {
-        margin-top: 20px;
-        margin-left: auto;
-        display: block;
-        width: 150px;
-        text-align: center;
-        margin-right: auto;
-        font-size: 1.2em;
-        padding: 12px 24px;
-        cursor: pointer;
-        transition: $secondTransition2;
-    }
+  .button {
+    margin-top: 20px;
+    margin-left: auto;
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin-right: auto;
+    font-size: 1.2em;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: $secondTransition2;
+  }
 }
 
 @keyframes heart {
-    from {
-        transform: scale(1.2);
-        color: #ee52bf;
-    }
-    
-    to {
-        color: #ee5253;
-        transform: scale(1);
-    }
+  from {
+    transform: scale(1.2);
+    color: #ee52bf;
+  }
+
+  to {
+    color: #ee5253;
+    transform: scale(1);
+  }
 }
 
 footer {
-    background-color: black;
-    color: $whiteColor;
-    padding: 25px;
-    text-align: center;
+  background-color: black;
+  color: $whiteColor;
+  padding: 25px;
+  text-align: center;
 
-    i {
-        margin: 0 0.3em;
-        animation-name: heart;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
+  i {
+    margin: 0 0.3em;
+    animation-name: heart;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 }
 
 /*******  BUTTONS *******/
 .button {
-    padding: 10px;
-    background: none;
-    border-radius: 5px;
-    border-style: none;
-    transition: $secondTransition;
+  padding: 10px;
+  background: none;
+  border-radius: 5px;
+  border-style: none;
+  transition: $secondTransition;
 
-    &:hover {
-        transform: scale(1.05) !important;
-    }
+  &:hover {
+    transform: scale(1.05) !important;
+  }
 
-    i.left-icon {
-        margin-right: 0.2em;
-    }
+  i.left-icon {
+    margin-right: 0.2em;
+  }
 
-    i.right-icon {
-        margin-left: 0.2em;
-    }
+  i.right-icon {
+    margin-left: 0.2em;
+  }
 }
 
-
 .button-primary {
-    color: $secondColorText;
-    background-color: $secondColor;
+  color: $secondColorText;
+  background-color: $secondColor;
 
-    &:hover {
-        background-color: $secondColorLight;
-    }
+  &:hover {
+    background-color: $secondColorLight;
+  }
 }
 
 .button-info {
-    color: $firstColorText;
-    background-color: $firstColor;
+  color: $firstColorText;
+  background-color: $firstColor;
 
-    &:hover {
-        background-color: $firstColorLight;
-    }
+  &:hover {
+    background-color: $firstColorLight;
+  }
 }
 
-
 .button-big {
-    padding: 15px;
-    font-size: 1.5em;
+  padding: 15px;
+  font-size: 1.5em;
 }
 
 .disabled {
-    opacity: 0.5 !important;
+  opacity: 0.5 !important;
+  cursor: default !important;
+  background-color: $mutedColor2;
+
+  & * {
+    color: $mutedColor !important;
     cursor: default !important;
-    background-color: $mutedColor2;
+  }
 
-    & * {
-        color: $mutedColor !important;
-        cursor: default !important;
-    }
-
-    &:hover {
-        transform: none !important;
-        background-color: $mutedColor2 !important;
-    }
+  &:hover {
+    transform: none !important;
+    background-color: $mutedColor2 !important;
+  }
 }
 
 /*******  INPUTS *******/
 
 input,
 textarea {
-    border: 0;
-    padding: 15px;
-    width: 100%;
+  border: 0;
+  padding: 15px;
+  width: 100%;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    @for $i from 1 through $gridColumns {
-        .col-sm-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
+  @for $i from 1 through $gridColumns {
+    .col-sm-#{$i} {
+      width: percentage($i / $gridColumns);
     }
+  }
 
-    #main-blob-area {
-        display: flex;
-    }
+  #main-blob-area {
+    display: flex;
+  }
 
-    #skills-table {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
+  #skills-table {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 
-    .certBig {
-        width: (800px / 1.6);
-        height: (597px / 1.6);
-    }
+  .certBig {
+    width: (800px / 1.6);
+    height: (597px / 1.6);
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    @for $i from 1 through $gridColumns {
-        .col-md-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
+  @for $i from 1 through $gridColumns {
+    .col-md-#{$i} {
+      width: percentage($i / $gridColumns);
+    }
+  }
+
+  #main-box {
+    padding: 4em;
+    padding-bottom: 0;
+  }
+
+  #main-desc-div {
+    padding: 4em;
+  }
+
+  #main-text {
+    font-size: 5em;
+  }
+
+  #skills-table {
+    margin-left: 100px;
+    margin-right: 100px;
+
+    .skill-col:first-child {
+      border-right: 1px solid $mutedColor;
+      border-bottom: none;
+    }
+  }
+
+  #projects {
+    padding: 50px;
+  }
+
+  #project-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .project {
+    margin: 10px;
+  }
+
+  .project-body {
+    background-size: 100%;
+
+    &:hover {
+      background-size: 105%;
+    }
+  }
+
+  .cert {
+    width: 175px;
+  }
+
+  .certBig {
+    width: (800px / 1.2);
+    height: (597px / 1.2);
+  }
+
+  #contact {
+    #form-row {
+      flex-wrap: nowrap;
     }
 
-    #main-box {
-        padding: 4em;
-        padding-bottom: 0;
+    #form-row > div:first-child {
+      margin-right: 20px;
+      margin-bottom: 0;
     }
-
-    #main-desc-div {
-        padding: 4em;
-    }
-
-    #main-text {
-        font-size: 5em;
-    }
-
-
-    #skills-table {
-        margin-left: 100px;
-        margin-right: 100px;
-
-        .skill-col:first-child {
-            border-right: 1px solid $mutedColor;
-            border-bottom: none;
-        }
-    }
-
-    #projects {
-        padding: 50px;
-    }
-
-    #project-list {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .project {
-        margin: 10px;
-    }
-
-    .project-body {
-        background-size: 100%;
-
-        &:hover {
-            background-size: 105%;
-        }
-    }
-
-    .cert {
-        width: 175px;
-    }
-
-    .certBig {
-        width: (800px / 1.2);
-        height: (597px / 1.2);
-    }
-
-    #contact {
-        #form-row {
-            flex-wrap: nowrap;
-        }
-
-        #form-row>div:first-child {
-            margin-right: 20px;
-            margin-bottom: 0;
-        }
-    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    @for $i from 1 through $gridColumns {
-        .col-lg-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
+  @for $i from 1 through $gridColumns {
+    .col-lg-#{$i} {
+      width: percentage($i / $gridColumns);
     }
+  }
 
-    #main-box {
-        text-align: right;
-        padding: 250px 1em 250px 8em;
-        max-width: 674.5px;
-    }
+  #main-box {
+    text-align: right;
+    padding: 250px 1em 250px 8em;
+    max-width: 674.5px;
+  }
 
-    #main-desc-div {
-        padding: 250px 8em 250px 1em;
-        max-width: 674.5px;
-    }
+  #main-desc-div {
+    padding: 250px 8em 250px 1em;
+    max-width: 674.5px;
+  }
 
-    #moreAboutText {
-        margin-top: -100px;
-    }
+  #moreAboutText {
+    margin-top: -100px;
+  }
 
-    .project {
-        width: 400px;
-    }
+  .project {
+    width: 400px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    @for $i from 1 through $gridColumns {
-        .g_col-xl-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
+  @for $i from 1 through $gridColumns {
+    .g_col-xl-#{$i} {
+      width: percentage($i / $gridColumns);
     }
+  }
 
-    #main-box {
-        margin-left: auto;
-    }
+  #main-box {
+    margin-left: auto;
+  }
 
-    #main-desc-div {
-        margin-right: auto;
-    }
+  #main-desc-div {
+    margin-right: auto;
+  }
 
-    #skills-table {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  #skills-table {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .project {
-        width: 500px;
-    }
+  .project {
+    width: 500px;
+  }
 
-    .certBig {
-        width: 800px;
-        height: 597px;
-    }
+  .certBig {
+    width: 800px;
+    height: 597px;
+  }
 }
 
 // ULTRA large devices (1920px and up)
 @media (min-width: 1920px) {
-    #about {
-        height: 750px;
-        min-height: 0;
-    }
+  #about {
+    height: 750px;
+    min-height: 0;
+  }
 
-    #skills-table {
-        margin-top: -200px;
-    }
+  #skills-table {
+    margin-top: -200px;
+  }
 
-    #blob {
-        background: linear-gradient($thirdColor, transparent, transparent, transparent);
-    }
+  #blob {
+    background: linear-gradient(
+      $thirdColor,
+      transparent,
+      transparent,
+      transparent
+    );
+  }
 }
