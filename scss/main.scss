@@ -74,7 +74,6 @@ $gridColumns: 12;
     transform: translateY(30%);
     display: inline-block;
     color: $whiteColor;
-    font-size: 1em;
     will-change: transform, opacity;
   }
 }
@@ -623,7 +622,7 @@ textarea {
   }
 
   #main-text {
-    font-size: 5em;
+    font-size: 4.9em;
   }
 
   #skills-table {
@@ -667,6 +666,10 @@ textarea {
   }
 
   #contact {
+    input, textarea {
+      background-color: white;
+      color: black;
+    }
     #form-row {
       flex-wrap: nowrap;
     }

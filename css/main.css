@@ -85,7 +85,6 @@ a {
   transform: translateY(30%);
   display: inline-block;
   color: white;
-  font-size: 1em;
   will-change: transform, opacity;
 }
 
@@ -685,7 +684,7 @@ textarea {
   }
 
   #main-text {
-    font-size: 5em;
+    font-size: 4.9em;
   }
 
   #skills-table {
@@ -726,6 +725,10 @@ textarea {
     height: 497.5px;
   }
 
+  #contact input, #contact textarea {
+    background-color: white;
+    color: black;
+  }
   #contact #form-row {
     flex-wrap: nowrap;
   }
