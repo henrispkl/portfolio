@@ -336,8 +336,8 @@ a {
   background-image: url("/img/travelfy.jpg");
 }
 
-#minimum {
-  background-image: url("/img/minimum.jpg");
+#intelliapp {
+  background-image: url("/img/intelliapp.jpg");
 }
 
 .project-body {
@@ -725,7 +725,8 @@ textarea {
     height: 497.5px;
   }
 
-  #contact input, #contact textarea {
+  #contact input,
+#contact textarea {
     background-color: white;
     color: black;
   }
