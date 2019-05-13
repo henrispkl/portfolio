@@ -131,6 +131,9 @@ body {
   display: none;
   margin-left: auto;
   margin-bottom: -20px;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: translateX(50%);
+  opacity: 0;
 }
 
 #info {
@@ -156,6 +159,9 @@ body {
   margin: 20px;
   min-height: 250px;
   text-align: center;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  opacity: 0;
+  transform: translateY(-10%);
 }
 .square h2 {
   margin-top: 0;
@@ -186,6 +192,10 @@ body {
 #about p {
   font-size: 1.2em;
 }
+#about #about-text {
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
 
 .img {
   max-width: 100%;
@@ -199,6 +209,14 @@ body {
 }
 .img-section .col {
   padding: 0 25px;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  opacity: 0;
+}
+.img-section .col:first-child {
+  transform: translateX(-50%);
+}
+.img-section .col:last-child {
+  transform: translateX(50%);
 }
 .img-section .img {
   box-shadow: 0 5px 25px rgba(79, 138, 180, 0.212);
@@ -580,6 +598,9 @@ footer ul a:hover {
 
   #squares .row {
     flex-wrap: nowrap;
+  }
+  #squares .square {
+    transform: translateY(-25%);
   }
 
   footer {

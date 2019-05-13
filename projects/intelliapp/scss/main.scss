@@ -1,390 +1,407 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .container {
-    max-width: 1290px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 15px;
+	max-width: 1290px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 15px;
 }
 
 .container2 {
-    max-width: 992px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 15px;
+	max-width: 992px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 15px;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 // Main
 
 $mainTrasition: all 0.3s ease;
-$secondTransition: all 1s cubic-bezier(.86,0,.07,1);
+$secondTransition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 
 $blackColor: #445a75;
 
 $defaultTextShadow: 0 2px 2px rgba(97, 120, 136, 0.377);
 
 body {
-    font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 #navbar {
-    padding: 30px;
-    transition: $mainTrasition;
-    z-index: 99;
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2em;
-    width: 100%;
-    top: 0;
-    text-shadow: $defaultTextShadow;
+	padding: 30px;
+	transition: $mainTrasition;
+	z-index: 99;
+	position: absolute;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2em;
+	width: 100%;
+	top: 0;
+	text-shadow: $defaultTextShadow;
 
-    .row {
-        align-items: center;
+	.row {
+		align-items: center;
 
-        div:first-child {
-            justify-content: center;
-            display: flex;
-        }
-    }
+		div:first-child {
+			justify-content: center;
+			display: flex;
+		}
+	}
 
-    #logo {
-        color: white;
-    }
+	#logo {
+		color: white;
+	}
 }
 
 #logo {
-    font-size: 1.5em;
-    font-family: "Cinzel Decorative", cursive;
-    display: inline-block;
+	font-size: 1.5em;
+	font-family: "Cinzel Decorative", cursive;
+	display: inline-block;
 }
 
 #navbar-menu {
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
 }
 
 #navbar-menu > li {
-    padding: 0 10px;
-    margin: 0;
-    display: inline-block;
-    cursor: pointer;
-    transition: $mainTrasition;
+	padding: 0 10px;
+	margin: 0;
+	display: inline-block;
+	cursor: pointer;
+	transition: $mainTrasition;
 
-    &:hover {
-        color: rgb(64, 47, 92);
-    }
+	&:hover {
+		color: rgb(64, 47, 92);
+	}
 }
 
 .sticky {
-    #navbar-menu > li {
-        &:hover {
-            color: rgb(83, 223, 204);
-        }
-    }
+	#navbar-menu > li {
+		&:hover {
+			color: rgb(83, 223, 204);
+		}
+	}
 }
 
 #main {
-    background: linear-gradient(
-        to right,
-        rgb(194, 162, 255),
-        rgb(255, 194, 194)
-    );
-    padding: 20px;
-    padding-top: 93px;
-    font-family: "Montserrat", sans-serif;
-    position: relative;
+	background: linear-gradient(to right, rgb(194, 162, 255), rgb(255, 194, 194));
+	padding: 20px;
+	padding-top: 93px;
+	font-family: "Montserrat", sans-serif;
+	position: relative;
 
-    .row {
-        z-index: 1;
-        position: relative;
-    }
+	.row {
+		z-index: 1;
+		position: relative;
+	}
 }
 
 #main-text {
-    color: white;
-    text-shadow: $defaultTextShadow;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: $secondTransition;
+	color: white;
+	text-shadow: $defaultTextShadow;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: $secondTransition;
 
-    h1 {
-        font-size: 2.5em;
-    }
+	h1 {
+		font-size: 2.5em;
+	}
 
-    p {
-        font-size: 1.5em;
-    }
+	p {
+		font-size: 1.5em;
+	}
 }
 
 #main-image {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-image: url("/projects/intelliapp/img/main-image.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-image: url("/projects/intelliapp/img/main-image.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
 }
 
 #main-phone-image {
-    max-width: 100%;
-    max-height: 500px;
-    display: none;
-    margin-left: auto;
+	max-width: 100%;
+	max-height: 500px;
+	display: none;
+	margin-left: auto;
     margin-bottom: -20px;
+    transition: $secondTransition;
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 #info {
-    background-color: white;
-    background-image: url("/img/info-bg.png");
-    background-size: 100%;
-    padding: 50px 0;
-    position: relative;
-    box-shadow: 0 0 20px rgba(79, 138, 180, 0.37);
+	background-color: white;
+	background-image: url("/img/info-bg.png");
+	background-size: 100%;
+	padding: 50px 0;
+	position: relative;
+	box-shadow: 0 0 20px rgba(79, 138, 180, 0.37);
 }
 
 #squares {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 }
 
 .square {
-    background-color: white;
-    color: $blackColor;
-    box-shadow: 0 5px 25px rgba(79, 138, 180, 0.212);
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    min-height: 250px;
+	background-color: white;
+	color: $blackColor;
+	box-shadow: 0 5px 25px rgba(79, 138, 180, 0.212);
+	border-radius: 5px;
+	padding: 20px;
+	margin: 20px;
+	min-height: 250px;
     text-align: center;
+    transition: $secondTransition;
+    opacity: 0;
+    transform: translateY(-10%);
 
-    h2 {
-        margin-top: 0;
-    }
+	h2 {
+		margin-top: 0;
+	}
 
-    i {
-        color: rgb(83, 223, 204);
-        display: block;
-        font-size: 4em;
-        margin-bottom: 20px;
-    }
+	i {
+		color: rgb(83, 223, 204);
+		display: block;
+		font-size: 4em;
+		margin-bottom: 20px;
+	}
 }
 
 .line {
-    width: 15%;
-    margin: auto;
-    height: 5px;
-    background-color: rgb(83, 223, 204);
-    margin-top: 0.2em;
-    border-radius: 50px;
+	width: 15%;
+	margin: auto;
+	height: 5px;
+	background-color: rgb(83, 223, 204);
+	margin-top: 0.2em;
+	border-radius: 50px;
 }
 
 #about {
-    color: $blackColor;
+	color: $blackColor;
 
-    h1 {
-        font-size: 2.5em;
-        text-align: center;
-    }
+	h1 {
+		font-size: 2.5em;
+		text-align: center;
+	}
 
-    p {
-        font-size: 1.2em;
-    }
+	p {
+		font-size: 1.2em;
+	}
+
+	#about-text {
+		opacity: 0;
+		transition: $secondTransition;
+	}
 }
 
 .img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .img-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 1.2em;
-    color: $blackColor;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 1.2em;
+	color: $blackColor;
 
-    .col {
+	.col {
         padding: 0 25px;
+        transition: $secondTransition;
+        opacity: 0;
+    }
+    
+    .col:first-child {
+        transform: translateX(-50%);
     }
 
-    .img {
-        box-shadow: 0 5px 25px rgba(79, 138, 180, 0.212);
-        border-radius: 2px;
-        display: block;
-        margin: auto;
-        margin-bottom: 25px;
+    .col:last-child {
+        transform: translateX(50%);
     }
 
-    h1,
-    h4 {
-        margin-top: 0;
-    }
+	.img {
+		box-shadow: 0 5px 25px rgba(79, 138, 180, 0.212);
+		border-radius: 2px;
+		display: block;
+		margin: auto;
+		margin-bottom: 25px;
+	}
+
+	h1,
+	h4 {
+		margin-top: 0;
+	}
 }
 
 .img-section:nth-child(even) {
-    .col:last-child {
-        order: -1;
-    }
+	.col:last-child {
+		order: -1;
+	}
 }
 
 #img1-section {
-    h4 {
-        color: #f4a11d;
-    }
+	h4 {
+		color: #f4a11d;
+	}
 }
 
 #img2-section {
-    h4 {
-        color: #f7726e;
-    }
+	h4 {
+		color: #f7726e;
+	}
 }
 
 #img3-section {
-    h4 {
-        color: #82c450;
-    }
+	h4 {
+		color: #82c450;
+	}
 }
 
 #pre-footer {
-    padding: 50px 0;
-    color: white;
-    background-color: #f7726e;
-    font-size: 1.2em;
-    position: relative;
-    box-shadow: 0 0 20px rgba(79, 138, 180, 0.37);
+	padding: 50px 0;
+	color: white;
+	background-color: #f7726e;
+	font-size: 1.2em;
+	position: relative;
+	box-shadow: 0 0 20px rgba(79, 138, 180, 0.37);
 
-    h1,
-    p {
-        margin-top: 0;
-    }
+	h1,
+	p {
+		margin-top: 0;
+	}
 
-    p {
-        display: block;
-    }
+	p {
+		display: block;
+	}
 
-    .col {
-        padding: 0 10px;
-    }
+	.col {
+		padding: 0 10px;
+	}
 }
 
 #pre-footer-button {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.8em;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0.8em;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 
-    .text {
-        width: 100%;
-    }
+	.text {
+		width: 100%;
+	}
 
-    .button {
-        margin-top: 20px;
-    }
+	.button {
+		margin-top: 20px;
+	}
 }
 
 footer {
-    color: white;
-    background-color: rgb(60, 75, 95);
-    padding: 25px 0;
-    position: relative;
-    text-align: center;
+	color: white;
+	background-color: rgb(60, 75, 95);
+	padding: 25px 0;
+	position: relative;
+	text-align: center;
 
-    .row {
-        div {
-            margin: 10px 0;
-        }
-    }
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
+	.row {
+		div {
+			margin: 10px 0;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 
-        a {
-            color: white;
-            text-transform: capitalize;
-            transition: $mainTrasition;
+		a {
+			color: white;
+			text-transform: capitalize;
+			transition: $mainTrasition;
 
-            &:hover {
-                color: rgb(83, 223, 204);
-            }
-        }
-    }
+			&:hover {
+				color: rgb(83, 223, 204);
+			}
+		}
+	}
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
-    position: fixed !important;
-    color: $blackColor !important;
-    top: 0;
-    width: 100%;
-    padding: 20px !important;
-    background-color: white;
-    font-size: 1em !important;
-    text-shadow: none !important;
-    box-shadow: 0 5px 15px rgba(79, 138, 180, 0.158);
+	position: fixed !important;
+	color: $blackColor !important;
+	top: 0;
+	width: 100%;
+	padding: 20px !important;
+	background-color: white;
+	font-size: 1em !important;
+	text-shadow: none !important;
+	box-shadow: 0 5px 15px rgba(79, 138, 180, 0.158);
 
-    #logo {
-        color: $blackColor !important;
-    }
+	#logo {
+		color: $blackColor !important;
+	}
 }
 
 // Buttons
 .button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    display: inline-block;
-    transition: $mainTrasition;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.048);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.082);
-    border-radius: 2px;
-    cursor: pointer;
+	padding: 15px 30px;
+	font-size: 1.2em;
+	display: inline-block;
+	transition: $mainTrasition;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.048);
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.082);
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 .button.action {
-    background: linear-gradient(to right, rgb(83, 223, 188), rgb(83, 223, 204));
-    color: white;
+	background: linear-gradient(to right, rgb(83, 223, 188), rgb(83, 223, 204));
+	color: white;
 
-    &:hover {
-        filter: brightness(105%);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.123);
-    }
+	&:hover {
+		filter: brightness(105%);
+		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.123);
+	}
 }
 
 .button.outline {
-    border: 1px solid white;
-    box-shadow: none;
-    font-size: 1em;
-    width: 100%;
+	border: 1px solid white;
+	box-shadow: none;
+	font-size: 1em;
+	width: 100%;
 
-    &:hover {
-        background-color: white;
-        color: #f7726e;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.082);
-    }
+	&:hover {
+		background-color: white;
+		color: #f7726e;
+		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.082);
+	}
 }
 
 // Grid system columns
@@ -392,112 +409,116 @@ $gridColumns: 12;
 
 // Extra small devices (portrait phones, less than 576px)
 @for $i from 1 through $gridColumns {
-    .col-#{$i} {
-        width: percentage($i / $gridColumns);
-    }
+	.col-#{$i} {
+		width: percentage($i / $gridColumns);
+	}
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    @for $i from 1 through $gridColumns {
-        .col-sm-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
-    }
+	@for $i from 1 through $gridColumns {
+		.col-sm-#{$i} {
+			width: percentage($i / $gridColumns);
+		}
+	}
 
-    #navbar-menu {
-        justify-content: flex-end;
-        margin-top: 0;
-    }
+	#navbar-menu {
+		justify-content: flex-end;
+		margin-top: 0;
+	}
 
-    #navbar {
-        .row {
-            div:first-child {
-                display: block;
-            }
-        }
-    }
+	#navbar {
+		.row {
+			div:first-child {
+				display: block;
+			}
+		}
+	}
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    @for $i from 1 through $gridColumns {
-        .col-md-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
-    }
+	@for $i from 1 through $gridColumns {
+		.col-md-#{$i} {
+			width: percentage($i / $gridColumns);
+		}
+	}
 
-    .container {
-        width: 100%;
-    }
+	.container {
+		width: 100%;
+	}
 
-    #main-phone-image {
-        display: block;
-    }
+	#main-phone-image {
+		display: block;
+	}
 
-    #squares {
-        margin-top: -12%;
-    }
+	#squares {
+		margin-top: -12%;
+	}
 
-    .img-section:nth-child(even) {
-        .col:last-child {
-            order: 0;
-        }
-    }
+	.img-section:nth-child(even) {
+		.col:last-child {
+			order: 0;
+		}
+	}
 
-    .img-section {
-        margin-top: 100px;
-        margin-bottom: 100px;
+	.img-section {
+		margin-top: 100px;
+		margin-bottom: 100px;
 
-        .img {
-            margin-bottom: 0;
-        }
-    }
+		.img {
+			margin-bottom: 0;
+		}
+	}
 
-    .button-container {
-        border-left: 1px solid white;
-        padding-left: 10%;
-    }
+	.button-container {
+		border-left: 1px solid white;
+		padding-left: 10%;
+	}
 
-    footer {
-        text-align: left;
+	footer {
+		text-align: left;
 
-        .row {
-            div {
-                margin: 0;
-            }
-        }
-    }
+		.row {
+			div {
+				margin: 0;
+			}
+		}
+	}
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    @for $i from 1 through $gridColumns {
-        .col-lg-#{$i} {
-            width: percentage($i / $gridColumns);
+	@for $i from 1 through $gridColumns {
+		.col-lg-#{$i} {
+			width: percentage($i / $gridColumns);
+		}
+	}
+
+	#main-phone-image {
+		margin-right: 25%;
+	}
+
+	#squares {
+		.row {
+			flex-wrap: nowrap;
         }
-    }
-
-    #main-phone-image {
-        margin-right: 25%;
-    }
-
-    #squares {
-        .row {
-            flex-wrap: nowrap;
+        
+        .square {
+            transform: translateY(-25%);
         }
-    }
+	}
 
-    footer {
-        padding: 50px 0;
-    }
+	footer {
+		padding: 50px 0;
+	}
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    @for $i from 1 through $gridColumns {
-        .g_col-xl-#{$i} {
-            width: percentage($i / $gridColumns);
-        }
-    }
+	@for $i from 1 through $gridColumns {
+		.g_col-xl-#{$i} {
+			width: percentage($i / $gridColumns);
+		}
+	}
 }

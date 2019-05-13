@@ -71,19 +71,55 @@ function scrollShow(element, distance = 0, markShown = true) {
 
 // Elements
 let mainText = document.getElementById("main-text");
+let phoneImage = document.getElementById("main-phone-image");
+let squares = document.getElementsByClassName("square");
+let aboutText = document.getElementById("about-text");
+let imgSection = document.querySelectorAll(".img-section .col");
 
 function displayElem(element) {
-    element.style.opacity = "1";
-    element.style.transform = "none";
+	element.style.opacity = "1";
+	element.style.transform = "none";
 }
 
 // First check
 if (scrollShow(mainText, 100)) {
-    displayElem(mainText);
+	displayElem(mainText);
 }
 
+if (scrollShow(phoneImage, 100)) {
+	displayElem(phoneImage);
+}
+
+// squares
+for (let i = 0; i < squares.length; i++) {
+	const element = squares[i];
+
+	// first check
+	if (scrollShow(element, 100)) {
+		displayElem(element);
+	}
+
+	// check on scroll
+	document.addEventListener("scroll", () => {
+		if (scrollShow(element, 100)) {
+			displayElem(element);
+		}
+	});
+}
+
+// About text
 document.addEventListener("scroll", () => {
-	if (scrollShow(mainText, 100)) {
-        // displayElem(mainText);
+	if (scrollShow(aboutText, 100)) {
+		displayElem(aboutText);
 	}
 });
+
+// Img sections
+for (let i = 0; i < imgSection.length; i++) {
+	const element = imgSection[i];
+	document.addEventListener("scroll", () => {
+		if (scrollShow(element, 100)) {
+			displayElem(element);
+		}
+	});
+}
