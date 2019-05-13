@@ -6,6 +6,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -104,7 +105,7 @@ body {
   text-shadow: 0 2px 2px rgba(97, 120, 136, 0.377);
   transform: translateX(-50%);
   opacity: 0;
-  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 #main-text h1 {
   font-size: 2.5em;
@@ -131,7 +132,7 @@ body {
   display: none;
   margin-left: auto;
   margin-bottom: -20px;
-  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 1s cubic-bezier(0.86, 0, 0.07, 1);
   transform: translateX(50%);
   opacity: 0;
 }
@@ -159,7 +160,7 @@ body {
   margin: 20px;
   min-height: 250px;
   text-align: center;
-  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 1s cubic-bezier(0.86, 0, 0.07, 1);
   opacity: 0;
   transform: translateY(-10%);
 }
@@ -194,7 +195,7 @@ body {
 }
 #about #about-text {
   opacity: 0;
-  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .img {
@@ -209,7 +210,7 @@ body {
 }
 .img-section .col {
   padding: 0 25px;
-  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1), opacity 1s cubic-bezier(0.86, 0, 0.07, 1);
   opacity: 0;
 }
 .img-section .col:first-child {
