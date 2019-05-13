@@ -102,6 +102,9 @@ body {
 #main-text {
   color: white;
   text-shadow: 0 2px 2px rgba(97, 120, 136, 0.377);
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 #main-text h1 {
   font-size: 2.5em;
@@ -299,7 +302,6 @@ footer ul a:hover {
   color: #445a75 !important;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .button {
   padding: 15px 30px;
   font-size: 1.2em;

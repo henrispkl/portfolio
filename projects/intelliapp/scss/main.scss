@@ -34,6 +34,7 @@ a {
 // Main
 
 $mainTrasition: all 0.3s ease;
+$secondTransition: all 1s cubic-bezier(.86,0,.07,1);
 
 $blackColor: #445a75;
 
@@ -123,6 +124,9 @@ body {
 #main-text {
     color: white;
     text-shadow: $defaultTextShadow;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: $secondTransition;
 
     h1 {
         font-size: 2.5em;
@@ -346,11 +350,6 @@ footer {
     #logo {
         color: $blackColor !important;
     }
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + section {
-    // padding-top: 73px !important;
 }
 
 // Buttons
