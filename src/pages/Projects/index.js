@@ -72,7 +72,7 @@ const Projects = props => {
         <Project info={motionflow} />
         <Project noexpand info={motionflowDashboard} />
         <Project info={intelliapp} />
-        <Project info={tempest} />
+        <Project noexpand info={tempest} />
       </div>
     </div>
   );
