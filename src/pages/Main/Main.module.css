@@ -1,0 +1,113 @@
+.Main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainText {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  position: relative;
+}
+
+.MainName {
+  font-size: 3em;
+  position: relative;
+  padding: 0 10px;
+}
+
+@keyframes FadeInText {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.MainName > .inline {
+  opacity: 0;
+  animation: FadeInText 0.1s forwards;
+  animation-delay: 1.5s;
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.Desc {
+  font-size: 1em;
+  text-transform: lowercase;
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  font-family: "Share Tech Mono", monospace;
+  word-spacing: 5px;
+  margin-top: 20px;
+}
+
+.DescItem {
+  position: relative;
+}
+
+.DescText {
+  opacity: 0;
+  animation: FadeInText 0.1s forwards;
+  animation-delay: 3.25s;
+}
+
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-75%);
+    opacity: 0;
+  }
+}
+
+.slideup {
+  opacity: 0;
+  animation: slideUpAnimation 0.5s ease forwards;
+}
+
+@keyframes slideDownAnimation {
+  from {
+    transform: translateY(-75%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.slidedown {
+  opacity: 0;
+  animation: slideDownAnimation 0.5s ease forwards;
+}
+
+@media (min-width: 576px) {
+  .MainName {
+    font-size: 4em;
+  }
+
+  .Desc {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .MainName {
+    font-size: 5em;
+  }
+  .MainName > .inline {
+    display: inline;
+  }
+}

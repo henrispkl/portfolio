@@ -1,0 +1,129 @@
+.Menu {
+  height: 100vh;
+  background-color: rgb(37, 36, 43);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes WordMapFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes WordMapFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+}
+
+.fadein {
+  animation: WordMapFadeIn 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.fadeout {
+  animation: WordMapFadeOut 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.WordMap {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.75em;
+  color: rgb(69, 67, 80);
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.removable {
+  display: none;
+}
+
+.Back {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.Back:hover {
+  opacity: 0.5;
+}
+
+.Back img {
+  width: 32px;
+  height: 32px;
+  transform: rotate(90deg);
+}
+
+@keyframes CursorBlink {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: white;
+  }
+}
+
+.Cursor {
+  width: 0.5em;
+  border: 1px solid white;
+  height: 1.15em;
+  position: absolute;
+  opacity: 0.75;
+  margin-left: -0.5em;
+  mix-blend-mode: color-burn;
+  animation: CursorBlink 0.5s alternate-reverse infinite;
+}
+
+.Cursor2 {
+  display: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .WordMap {
+    max-width: 500px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .WordMap {
+    max-width: 800px;
+  }
+
+  .removable {
+    display: inline;
+  }
+
+  .Cursor1 {
+    display: none;
+  }
+
+  .Cursor2 {
+    display: inline-block;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .WordMap {
+    max-width: 1000px;
+  }
+}

@@ -1,0 +1,281 @@
+.Project {
+  width: 275px;
+  height: 275px;
+  position: relative;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.ProjectSquare {
+  cursor: pointer;
+}
+
+.ProjectSquare > img {
+  width: 100%;
+  height: 100%;
+}
+
+.ProjectName {
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  top: 50%;
+  color: white;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 0 2px 3px #4c3f7ed7;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #9880fad7;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Project:hover .ProjectName,
+.Project:hover .Gradient {
+  opacity: 1;
+}
+
+.InfoModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  overflow-y: scroll;
+  z-index: 25;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+.InfoModalEnter,
+.InfoModalEnter + .InfoBg {
+  opacity: 0;
+}
+
+.InfoModalEnterActive,
+.InfoModalEnterActive + .InfoBg {
+  opacity: 1;
+}
+
+.InfoModalExit,
+.InfoModalExit + .InfoBg {
+  opacity: 1;
+}
+
+.InfoModalExitActive,
+.InfoModalExitActive + .InfoBg {
+  opacity: 0;
+}
+
+.InfoModalEnterActive .InfoMain {
+  transform: translateY(0);
+}
+
+.InfoMain {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.253);
+  max-width: 992px;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  transition: transform 0.3s ease;
+  transform: translateY(-100px);
+}
+
+.InfoName {
+  font-size: 1.5em;
+  background-color: rgb(37, 36, 43);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.Close {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+}
+
+.Close:hover {
+  opacity: 0.5;
+}
+
+.Close > img {
+  max-width: 100%;
+  width: 32px;
+  height: 32px;
+}
+
+.InfoContent {
+  padding: 20px;
+}
+
+.Tags {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Tag {
+  display: inline-block;
+  padding: 5px 15px;
+  color: white;
+  background-color: #ff94df;
+  margin: 5px;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.Tag:hover {
+  transform: scale(1.05);
+}
+
+.Tag > img {
+  width: 18px;
+  height: 18px;
+  vertical-align: sub;
+  margin-right: 5px;
+  transform: rotate(-45deg);
+}
+
+.Visit {
+  color: white;
+  background-color: #9980fa;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 2px;
+}
+
+.Visit:hover {
+  background-color: #ff94df;
+  color: white;
+}
+
+.Visit > img {
+  width: 16px;
+  height: 16px;
+  vertical-align: sub;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.Visit:hover > img {
+  transform: translateX(3px);
+}
+
+.Images {
+  margin-top: 20px;
+  max-height: 1000px;
+  overflow: hidden;
+  position: relative;
+  padding: 5px;
+}
+
+.ExpandedImages {
+  max-height: initial;
+  overflow: visible;
+}
+
+.Expand {
+  background: linear-gradient(transparent, black);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: calc(100% - 10px);
+  transform: translateX(-50%);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Expand > img {
+  width: 32px;
+  height: 32px;
+}
+
+.Image {
+  margin: 20px auto;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.288);
+  border-radius: 2px;
+  position: relative;
+}
+
+.Image img {
+  max-width: 100%;
+  display: block;
+}
+
+.Image:first-child {
+  margin-top: 0;
+}
+
+.Image:last-child {
+  margin-bottom: 0;
+}
+
+.ImageLink {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.ImageLink:hover {
+  opacity: 0.5;
+}
+
+.Video {
+  text-align: center;
+  margin: 40px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.288);
+  background-color: rgb(37, 36, 43);
+}
+
+.VideoDesc {
+  color: white;
+  padding: 15px 5px;
+  background-color: rgb(37, 36, 43);
+  padding-top: 10px;
+}
+
+@media (min-width: 576px) {
+  .Project {
+    width: 325px;
+    height: 325px;
+  }
+}
+
+@media (min-width: 768px) {
+  .Project {
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .InfoMain {
+    margin: 20px auto;
+  }
+}

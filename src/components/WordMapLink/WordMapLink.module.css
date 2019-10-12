@@ -1,0 +1,10 @@
+.WordMapLink {
+  color: #9980fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  word-break: keep-all;
+}
+
+.WordMapLink:hover {
+  color: #ff94df;
+}

@@ -1,0 +1,40 @@
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.MainButton {
+  opacity: 0;
+  animation: FadeIn 0.3s ease-in-out forwards;
+  animation-delay: 4.25s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(25%);
+  }
+}
+
+.Icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 80px;
+  animation: float 1s ease-in-out alternate-reverse;
+  animation-iteration-count: infinite;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.Icon:hover {
+  animation-play-state: paused;
+  opacity: 0.5;
+}

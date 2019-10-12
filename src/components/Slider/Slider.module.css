@@ -1,0 +1,116 @@
+.Slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9980fa;
+  transform: scaleX(0);
+  transform-origin: 0% 0%;
+  z-index: 50;
+}
+
+.round {
+  border-radius: 5px;
+}
+
+.fixed {
+  position: fixed !important;
+  z-index: 100;
+}
+
+/* Normal classes */
+.SlideInX {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.SlideInXActive,
+.SlideInXDone {
+  transform: scaleX(1);
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s ease-in-out;
+}
+
+.SlideInY {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.SlideInYActive,
+.SlideInYDone {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s ease-in-out;
+}
+
+.SlideOutX {
+  transform: scaleX(1);
+  transform-origin: 100% 100%;
+}
+
+.SlideOutXActive,
+.SlideOutXDone {
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.SlideOutY {
+  transform: scaleY(1);
+  transform-origin: 100% 100%;
+}
+
+.SlideOutYActive,
+.SlideOutYDone {
+  transform: scaleY(0);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/* Reverse classes */
+.SlideInXReverse {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.SlideInXReverseActive,
+.SlideInXReverseDone {
+  transform: scaleX(1);
+  transform-origin: right;
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s ease-in-out;
+}
+
+.SlideInYReverse {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.SlideInYReverseActive,
+.SlideInYReverseDone {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s ease-in-out;
+}
+
+.SlideOutXReverse {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.SlideOutXReverseActive,
+.SlideOutXReverseDone {
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.SlideOutYReverse {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.SlideOutYReverseActive,
+.SlideOutYReverseDone {
+  transform: scaleY(0);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}

@@ -1,0 +1,75 @@
+.Skill {
+  margin: 20px auto;
+  font-size: 0.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.Name {
+  width: 150px;
+  background-color: #9980fa;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.Bar {
+  height: 32px;
+  background-color: rgb(29, 28, 34);
+  width: 300px;
+  display: flex;
+  align-self: center;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  box-shadow: inset 3px -2px 3px rgba(255, 255, 255, 0.075);
+}
+
+.Progress {
+  background-color: rgb(140, 255, 169);
+  position: relative;
+  transition: width 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.ProgressText {
+  position: absolute;
+  color: rgb(29, 28, 34);
+  font-weight: bold;
+  height: 100%;
+  top: 0;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.Skill:not(.transparent) .ProgressText {
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .Name {
+    width: 125px;
+  }
+}
