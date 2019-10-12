@@ -1,3 +1,4 @@
-W.I.P
+My personal website.
 
-Source code of my portfolio website, built with React.
+You can access it here:
+https://henrisparkle.github.io/
