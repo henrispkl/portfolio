@@ -51,11 +51,12 @@ const About = props => {
           <Skill name="HTML5" value="98" />
           <Skill name="CSS3" value="95" />
           <Skill name="JavaScript" value="90" />
+          <Skill name="React" value="90" />
           <Skill name="Bootstrap 4" value="90" />
-          <Skill name="React" value="85" />
           <Skill name="Redux" value="80" />
           <Skill name="UX/UI" value="50" />
-          <Skill name="PHP" value="45" />
+          <Skill name="Node" value="40" />
+          <Skill name="MongoDB" value="40" />
           <br />
           <p>
             Being very hungry for knowledge, I try to learn about everything I can and try

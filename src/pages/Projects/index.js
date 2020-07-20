@@ -47,7 +47,7 @@ const projects = {
     folder: "medicare",
     name: "Medicare",
     overview: "A fictional freelancing platform for healthcare workers. It uses the MERN stack and has a simple CRUD for jobs and professionals. It also has a simple JWT authentication for user login/registration.",
-    tags: ["React", "Node", "Express", "MongoDB"],
+    tags: ["React", "Node", "Express", "MongoDB", "Redux",],
     images: 8,
     link: "https://github.com/henrispkl/medicare"
   }
