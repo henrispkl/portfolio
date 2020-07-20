@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./About.module.css";
 
+import Certification from "../../components/Certfication/Certification";
 import Back from "../../assets/svg/arrow_back.svg";
 import Avatar from "../../assets/img/avatar.jpg";
 import Skill from "../../components/Skill/Skill";
@@ -62,6 +63,13 @@ const About = props => {
             more to what I already know. And when it comes to working professionally, this
             may sound cliche, but I truly love what I do!
           </p>
+          <br />
+          <h3>My certifications:</h3>
+          <br />
+          <div className={classes.Certifications}>
+            <Certification number={1} />
+            <Certification number={2} />
+          </div>
           <br />
           <p>
             Feel free to take a look at my latest projects on the{" "}

@@ -144,7 +144,7 @@ const Project = props => {
               {props.info.link && (
                 <a
                   className={classes.Visit}
-                  href={props.info.link}
+                  href={process.env.PUBLIC_URL + props.info.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

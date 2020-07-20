@@ -1,4 +1,4 @@
 My personal website.
 
 You can access it here:
-https://henrispkl.github.io/
+https://henrispkl.github.io/portfolio
