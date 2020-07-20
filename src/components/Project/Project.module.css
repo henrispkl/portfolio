@@ -1,44 +1,58 @@
 .Project {
   width: 275px;
-  height: 275px;
   position: relative;
-  display: inline-block;
-  margin: 5px 0;
-}
-
-.ProjectSquare {
+  margin: 20px auto;
+  width: 80%;
   cursor: pointer;
 }
 
-.ProjectSquare > img {
-  width: 100%;
-  height: 100%;
+.Project:hover .ProjectBox {
+  transform: scale(102%);
+  opacity: 0.8;
 }
 
-.ProjectName {
-  position: absolute;
-  width: 95%;
-  left: 50%;
-  top: 50%;
+.ProjectBox {
+  display: flex;
+  min-height: 150px;
+  padding: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: #ff94df;
+}
+
+.ProjectText {
+  width: 80%;
+  display: flex;
+  align-items: center;
   color: white;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-  font-size: 1.5em;
-  text-shadow: 0 2px 3px #4c3f7ed7;
-  z-index: 5;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  font-size: 1.15em;
+  margin-left: 10px;
 }
 
-.Gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #9880fad7;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.ProjectText span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.ProjectText b {
+  font-size: 1.05em;
+}
+
+.ProjectImage {
+  width: 20%;
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectImage > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
 }
 
 .Project:hover .ProjectName,
@@ -57,6 +71,7 @@
   overflow-y: scroll;
   z-index: 25;
   background-color: rgba(0, 0, 0, 0.521);
+  cursor: default;
 }
 
 .InfoModalEnter,
@@ -226,6 +241,7 @@
 .Image img {
   max-width: 100%;
   display: block;
+  margin: auto;
 }
 
 .Image:first-child {
@@ -262,20 +278,34 @@
 }
 
 @media (min-width: 576px) {
-  .Project {
-    width: 325px;
-    height: 325px;
-  }
 }
 
 @media (min-width: 768px) {
-  .Project {
-    margin: auto;
+  .ProjectImage {
+    min-width: 150px;
+  }
+
+  .ProjectImage > img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ProjectBox {
+    padding: 20px;
+  }
+
+  .ProjectText {
+    margin-left: 20px;
   }
 }
 
 @media (min-width: 992px) {
   .InfoMain {
     margin: 20px auto;
+  }
+
+  .ProjectText span {
+    overflow: visible;
+    display: block;
   }
 }

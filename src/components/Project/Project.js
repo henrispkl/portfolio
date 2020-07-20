@@ -129,7 +129,7 @@ const Project = props => {
             </div>
             <div className={classes.InfoContent}>
               <p>
-                <b>Overview: </b> {props.info.overview}
+                <b>Overview:</b> {props.info.overview}
               </p>
               <div className={classes.Tags}>
                 {props.info.tags.map(tag => {
@@ -166,10 +166,17 @@ const Project = props => {
 
   return (
     <div className={classes.Project}>
-      <div onClick={showModal} className={classes.ProjectSquare}>
-        <div className={classes.Gradient}></div>
-        <div className={classes.ProjectName}>{props.info.name}</div>
-        <img src={mainImg} alt="" />
+      <div onClick={showModal} className={classes.ProjectBox}>
+        <div className={classes.ProjectImage}>
+          <img src={mainImg} alt="" />
+        </div>
+        <div className={classes.ProjectText}>
+          <div>
+            <b>{props.info.name}</b>
+            <br />
+            <span>{props.info.overview}</span>
+          </div>
+        </div>
       </div>
       {infoElement}
     </div>
