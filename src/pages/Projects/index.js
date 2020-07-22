@@ -10,7 +10,7 @@ const projects = {
     name: "Tempest Design",
     overview: "A simple mockup website of a fictional design agency.",
     tags: ["HTML5", "CSS3", "CSS Animations", "JavaScript", "Bootstrap 4"],
-    link: "/portfolio/tempest",
+    link: "/tempest",
     images: 3
   },
   intelliapp: {
@@ -18,7 +18,7 @@ const projects = {
     name: "IntelliApp Landing Page",
     overview: "A mockup landing page website of a fictional company.",
     tags: ["HTML5", "CSS3", "JavaScript", "CSS Animations", "Landing Page"],
-    link: "/portfolio/intelliapp",
+    link: "/intelliapp",
     images: 4
   },
   motionflow: {
@@ -49,7 +49,8 @@ const projects = {
     overview: "A fictional freelancing platform for healthcare workers. It uses the MERN stack and has a simple CRUD for jobs and professionals. It also has a simple JWT authentication for user login/registration.",
     tags: ["React", "Node", "Express", "MongoDB", "Redux",],
     images: 8,
-    link: "https://github.com/henrispkl/medicare"
+    link: "https://github.com/henrispkl/medicare",
+    externalLink: true
   }
 };
 

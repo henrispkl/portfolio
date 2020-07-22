@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
-import { CSSTransition } from "react-transition-group";
+import React, { useState, useEffect, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
-import classes from "./Project.module.css";
-import DoubleArrow from "../../assets/svg/double_arrow.svg";
-import Label from "../../assets/svg/label.svg";
-import OpenInNew from "../../assets/svg/open_in_new.svg";
-import Close from "../../assets/svg/close.svg";
-import ExpandMore from "../../assets/svg/expand_more.svg";
+import classes from './Project.module.css';
+import DoubleArrow from '../../assets/svg/double_arrow.svg';
+import Label from '../../assets/svg/label.svg';
+import OpenInNew from '../../assets/svg/open_in_new.svg';
+import Close from '../../assets/svg/close.svg';
+import ExpandMore from '../../assets/svg/expand_more.svg';
 
-const Project = props => {
+const Project = (props) => {
   const [infoModal, setInfoModal] = useState(false);
   const [expandedImages, setExpandedImages] = useState(false);
 
@@ -30,8 +30,8 @@ const Project = props => {
     setExpandedImages(true);
   };
 
-  const useClickToRef = ref => {
-    const handleClickOutside = event => {
+  const useClickToRef = (ref) => {
+    const handleClickOutside = (event) => {
       // If the click was outside the main content and the modal is currently open
       if (ref.current && event.target === ref.current && infoModal) {
         hideModal();
@@ -39,9 +39,9 @@ const Project = props => {
     };
 
     useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
       return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener('mousedown', handleClickOutside);
       };
     });
   };
@@ -115,10 +115,10 @@ const Project = props => {
         enterDone: classes.InfoModalEnterActive,
         exit: classes.InfoModalExit,
         exitActive: classes.InfoModalExitActive,
-        exitDone: classes.InfoModalExitActive
+        exitDone: classes.InfoModalExitActive,
       }}
     >
-      {state => (
+      {(state) => (
         <div className={classes.InfoModal} ref={infoModalRef}>
           <div className={classes.InfoMain}>
             <div className={classes.InfoName}>
@@ -132,7 +132,7 @@ const Project = props => {
                 <b>Overview:</b> {props.info.overview}
               </p>
               <div className={classes.Tags}>
-                {props.info.tags.map(tag => {
+                {props.info.tags.map((tag) => {
                   return (
                     <div key={tag} className={classes.Tag}>
                       <img src={Label} alt="" />
@@ -144,7 +144,10 @@ const Project = props => {
               {props.info.link && (
                 <a
                   className={classes.Visit}
-                  href={process.env.PUBLIC_URL + props.info.link}
+                  href={
+                    (props.info.externalLink ? '' : process.env.PUBLIC_URL) +
+                    props.info.link
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -153,7 +156,7 @@ const Project = props => {
                 </a>
               )}
               <div className={classes.Videos}>{videos}</div>
-              <div className={imagesClassname.join(" ")}>
+              <div className={imagesClassname.join(' ')}>
                 {images}
                 {expandButton}
               </div>
