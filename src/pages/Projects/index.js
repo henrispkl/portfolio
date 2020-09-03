@@ -32,7 +32,8 @@ const projects = {
       "Showcasing the animations of each page",
       "Showcasing some of the responsiveness of the pages",
       "Navbar animations"
-    ]
+    ],
+    link: '/motionflow'
   },
   motionflowDashboard: {
     folder: "motionflow-dashboard",
