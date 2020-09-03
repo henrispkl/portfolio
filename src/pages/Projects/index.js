@@ -63,6 +63,7 @@ const projects = {
     images: 7,
     videos: ['Overall showcase of the project'],
     link: 'https://mernbb.herokuapp.com/',
+    externalLink: true
   },
 };
 
