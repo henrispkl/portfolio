@@ -107,9 +107,9 @@ body {
 }
 
 .button {
-  padding: 20px 40px;
-  font-size: 20px;
+  padding: 15px 40px;
   border-radius: 5px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ body {
   display: flex;
   align-items: flex-start;
   font-family: Circular-Regular;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 #go-to-shop {
@@ -129,29 +129,55 @@ body {
   background-color: rgba(255, 255, 255, 0.26);
 }
 
+#watch-video i {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
 #navbar {
   position: fixed;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
   width: 100%;
   z-index: 20;
   justify-content: center;
-  padding: 20px 20px;
+  padding: 25px 20px;
   font-family: Aktiv;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   display: none;
+  max-width: 1350px;
+}
+
+#menu {
+  visibility: hidden;
+}
+
+#logo {
+  margin-left: auto;
+  padding-left: 40px;
+}
+
+#media {
+  margin-left: auto;
+  display: flex;
+  color: white;
+}
+
+.media-button {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.media-button + .media-button {
+  margin-left: 35px;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   #header-main-text {
     font-size: 60px;
-  }
-
-  #header-description {
-    font-size: 20px;
-    margin-top: -20px;
   }
 
   #navbar {
@@ -162,14 +188,14 @@ body {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #header-main-text {
-    font-size: 90px;
+    font-size: 75px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) {
-} */
+@media (min-width: 992px) {
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {
-} */
+@media (min-width: 1200px) {
+}
