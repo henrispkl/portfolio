@@ -435,7 +435,7 @@ a:visited {
   justify-content: space-between;
   opacity: 0;
   transform: translateY(20%);
-  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease;
+  transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease;
 }
 
 .client.visible {
@@ -528,27 +528,18 @@ a:visited {
 }
 
 #hidden1,
-#hidden2 {
-  opacity: 0;
-  transform: translateY(50%);
-  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease;
-}
-
+#hidden2,
 #hidden3,
 #hidden4 {
   opacity: 0;
   transition: opacity 1s ease;
 }
 
+#hidden1.visible,
+#hidden2.visible,
 #hidden3.visible,
 #hidden4.visible {
   opacity: 1;
-}
-
-#hidden1.visible,
-#hidden2.visible {
-  opacity: 1;
-  transform: translateY(0%);
 }
 /*************/
 
