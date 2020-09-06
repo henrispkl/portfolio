@@ -53,6 +53,7 @@ body {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 p {
@@ -62,6 +63,7 @@ p {
 a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease;
 }
 
 a:visited {
@@ -112,23 +114,41 @@ a:visited {
   top: 0;
   width: 100%;
   z-index: 20;
-  justify-content: center;
-  padding: 25px 20px;
+  padding: 20px 20px;
   font-family: Aktiv;
   color: white;
   font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#navbar .container {
+  justify-content: center;
   display: flex;
   max-width: 1350px;
+}
+
+#navbar.white {
+  background-color: white;
+}
+
+#navbar.white a {
+  color: black;
 }
 
 #logo {
   margin-left: auto;
   padding-left: 50px;
+  transition: color 0.3s ease;
+}
+
+#logo a:hover {
+  color: #d3bf7a;
 }
 
 #media {
   margin-left: auto;
   display: flex;
+  align-items: center;
   color: white;
 }
 
@@ -143,7 +163,8 @@ a:visited {
   backface-visibility: hidden;
 }
 
-.media-button a:hover {
+.media-button a:hover,
+#navbar.white .media-button a:hover {
   color: #d3bf7a;
 }
 
@@ -213,6 +234,24 @@ a:visited {
   color: white;
 }
 
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+#header-main-text {
+  opacity: 0;
+  animation: slideInFromTop 0.5s ease forwards;
+  animation-delay: 1s;
+}
+
 .effect-text {
   font-size: 40px;
   margin-left: -5px;
@@ -227,10 +266,26 @@ a:visited {
 }
 
 #header-description {
+  opacity: 0;
+  animation: slideInFromTop 0.5s ease forwards;
+  animation-delay: 2.5s;
   font-size: 16px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 #header-buttons {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 3.5s;
   display: flex;
   font-family: Circular;
   margin-top: 25px;
@@ -290,6 +345,23 @@ a:visited {
   display: flex;
   flex-direction: column;
   width: 300px;
+  opacity: 0;
+  transition: opacity 0.75s ease;
+}
+
+.topic.visible {
+  opacity: 1;
+}
+
+.topic .title,
+.topic .text {
+  opacity: 0;
+}
+
+.topic.visible .title,
+.topic.visible .text {
+  animation: slideInFromTop 0.5s ease forwards;
+  animation-delay: 1s;
 }
 
 .topic + .topic {
@@ -299,13 +371,16 @@ a:visited {
 .topic .image {
   width: 100%;
   height: 400px;
-  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
   border-radius: 1px;
+  /* flex: 0 0 50%; */
 }
 
-.topic .image img {
+.topic .image .content {
+  background: url('assets/images/placeholder2.jpg');
+  padding-bottom: 100%;
   max-width: 100%;
+  height: 100%;
 }
 
 .topic .title {
@@ -337,39 +412,68 @@ a:visited {
 #clients {
   display: flex;
   flex-direction: column;
+  margin: auto;
   margin-top: 150px;
-  max-width: 1325px;
+  padding: 0 20px;
+  max-width: 1375px;
 }
 
 #clients .row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 #clients .row + .row {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .client {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease;
+}
+
+.client.visible {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.client + .client {
+  margin-top: 30px;
+}
+
+.client:last-child .image {
+  order: 1;
+}
+
+#clients .info {
+  font-weight: 300;
+  padding: 0 15px;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .client .image {
   border-radius: 10px;
-  background-color: black;
-  width: calc(50vw / 3.1);
-  height: calc(50vw / 3.1);
-  min-width: 125px;
-  min-height: 125px;
-  max-width: 650px;
-  max-height: 650px;
+  background: url('assets/images/placeholder.jpg');
+  background-size: 100%;
+  max-width: 310px;
+  max-height: 310px;
+  flex: 0 0 45%;
+  width: 50%;
+  overflow: hidden;
 }
 
-#client-3 .image {
-  width: calc(50vw / 1.475);
-  height: calc(50vw / 1.475);
+.client .image .content {
+  padding-bottom: 100%;
+  max-width: 100%;
 }
 
 #client-4 {
@@ -384,9 +488,14 @@ a:visited {
   align-items: center;
 }
 
-#clients .info {
-  font-weight: 300;
-  padding: 0 35px;
+#clients .info.special-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  height: 50%;
 }
 
 #clients .info .name {
@@ -394,7 +503,7 @@ a:visited {
 }
 
 #clients .info .instagram {
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: #f7f7f7;
   padding: 6px 12px;
   border-radius: 5px;
@@ -406,7 +515,7 @@ a:visited {
 
 #clients .info .instagram:hover {
   transform: scale(1.1);
-  background-color: #f4f4f4;
+  background-color: #f3f3f3;
 }
 
 #clients .info .instagram a {
@@ -414,8 +523,32 @@ a:visited {
 }
 
 #clients .info .followers {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 20px;
+}
+
+#hidden1,
+#hidden2 {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease;
+}
+
+#hidden3,
+#hidden4 {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#hidden3.visible,
+#hidden4.visible {
+  opacity: 1;
+}
+
+#hidden1.visible,
+#hidden2.visible {
+  opacity: 1;
+  transform: translateY(0%);
 }
 /*************/
 
@@ -465,6 +598,42 @@ a:visited {
   .topic:nth-child(even) {
     margin-left: 30px;
   }
+
+  #clients {
+    padding: 0 55px;
+  }
+
+  .client {
+    width: 50%;
+    justify-content: flex-start;
+  }
+
+  .client + .client {
+    margin-top: 0;
+  }
+
+  #clients .row + .row {
+    margin-top: 20px;
+  }
+
+  .client:last-child .image {
+    order: 0;
+  }
+
+  .client .image {
+    flex: 0 0 50%;
+  }
+
+  #client-3 .image {
+    flex: 0 1 100%;
+    width: 100%;
+    max-width: initial !important;
+    max-height: initial !important;
+  }
+
+  #client-3 {
+    padding-right: 20px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -499,5 +668,9 @@ a:visited {
   .topic:nth-child(3),
   .topic:nth-child(4) {
     margin-top: 0;
+  }
+
+  #clients {
+    padding: 0 25px;
   }
 }
